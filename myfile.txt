@@ -1,2 +1,2 @@
 Hello, this is the repository of Marc Adrian Jimenez.
-Completed my first commit and push.
+Completed the first Push and Commit.
