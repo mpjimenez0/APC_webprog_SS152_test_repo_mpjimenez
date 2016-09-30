@@ -1,0 +1,17 @@
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		WEBPROG-Excercise1
+	</title>
+	<body background="tiedye.jpg">
+
+	<div>
+		<h1 style="text-align:center; font-family:courier; font-size:4em; color:black; height:25px; padding:20px"><b>MY FIRST WEBSITE!!</b></h1>
+	</div>
+	
+	<div style="background-image:url('menugrid.png');width:100%; height:10%; margin:0">
+		<p style="font-family:Comic Sans MS; font-size: 43; text-align:center"><a href="mypage1.html" style="text-decoration:none; color:black">Profile</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mypage.html" style="text-decoration:none; color:black">Main</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=></p>
+	</div>
+
+	</body>
+<html>
