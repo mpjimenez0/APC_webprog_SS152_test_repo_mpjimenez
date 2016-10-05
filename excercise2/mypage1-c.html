@@ -1,9 +1,8 @@
-<<html>
+<html>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
 		WEBPROG-Excercise2
 	</title>
-	
 	<style>
 		body{
 			background-image: url("clouds-bg.png");
@@ -17,12 +16,7 @@
 			font-style: strong;
 		}
 		div{
-			text-align: center;
-		}
-		p{
-			text-align: center;
-			font-size: 26;
-			color: black;
+			text-align:center;
 		}
 		a:link{
 			text-decoration:none;
@@ -31,50 +25,76 @@
 		a:visited{
 			color: black;
 		}
-		a:hover{
-			color: #966fd6;
+		a:hover, a:active{
+			color: #966fd6; 
 		}
-		.div-pic{
+		p{
+			text-align: center;
+			font-size: 26;
+		}
+		table {
+			font-family:goudy old style;
+			width: 100%;
+			font-size: 25;
+			padding-left: 70;
+			padding-right: 70;
+		}
+		th{
+			background:#FFD1DC;
+		}
+		td, th {
+			border: 3px solid #000000;
+			text-align: left;
+			padding: 10px;
+		}
+		hr{
+			width: 58%;
+			color: black;
+		}
+		#div-pic{
 			width: 120;
 			height: 120;
 		}
-		.normaltitle{
-			text-align: left;
-			font-size: 32;	
-			color: black;
+		#normal{
+			font-size: 25;
+			padding-left:10%;
+			padding-right:10%;
 		}
 		#subcat{
-			font-size: 50;
+			font-size: 40;
 		}
 		#extramenu{
-			background-image: url("menugrid.png");
 			width: 100%;
 			height: 10%;
 		}
 		#title{
 			font-size: 85;
 			height: 40;
-		padding: 20;
+			padding: 20;
 		}
-		#left{
-			text-align: left;
-			padding-left: 25%;
-			padding-right: 10%;
+		#just{
+			font-size: 25;
+			padding-left:10%;
+			padding-right:10%;
+			text-align: justify;
 		}
-	</style>	
+	</style>
 	
 	<body>
-		<div>
-			<h1 id="title"><b>m e t a n o i a</b></h1>
-		</div>
-		
-		<div id="extramenu">
-			<p id="subcat">
-				<a href="mypage1-c.html" id="headlink">profile</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="mypage-c.html" id="headlink">main</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="mypage2-c.html" id="headlink">gallery</a>
-			</p>
-		</div>
+	<div style="text-align:center; margin-top:5em; margin-bottom:1em">
+		<img src="http://fontmeme.com/embed.php?text=metanoia&name=MissBrooks.ttf&size=70&style_color=000000" alt="Cursive Fonts" style="margin-bottom:0.1em">
+	</div>
+	
+	<div id="extramenu">
+		<p id="subcat">
+			<a href="mypage1-c.html" id="headlink">profile</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="mypage-c.html" id="headlink">main</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="mypage2-c.html" id="headlink">gallery</a>
+		</p>
+	</div>
+
+
+
 		
 		<div>
 			<h2 id="subcat"> <b>personal info</b> </h2>
@@ -100,12 +120,15 @@
 		</div>
 		
 		<p style="text-align:center">
-			<img src="jolteon-m.gif" alt="pokemon-gif" class="div-pic">
-			<img src="donut.png" alt="donut" class="div-pic">
-			<img src="donut.png" alt="donut" class="div-pic">
-			<img src="donut.png" alt="donut" class="div-pic">
-			<img src="jolteon.gif" alt="pokemon-gif" class="div-pic">
+			<img src="jolteon-m.gif" alt="pokemon-gif" id="div-pic">
+			<img src="donut.png" alt="donut" id="div-pic">
+			<img src="donut.png" alt="donut" id="div-pic">
+			<img src="donut.png" alt="donut" id="div-pic">
+			<img src="jolteon.gif" alt="pokemon-gif" id="div-pic">
 		</p>
+		
+		<br>
+		<hr>
 		
 		<div style="height:18%" id="extramenu">
 			<p>- - - Jimenez, Marc Adrian P. | BSCS-CN151 | APC - - -</p>
