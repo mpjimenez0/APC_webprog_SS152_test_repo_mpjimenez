@@ -6,6 +6,7 @@
 	<style>
 		body{
 			background-image: url("clouds-bg.png");
+			background-attachment: fixed;
 			font-family: Goudy Old Style;
 		}
 		h1{
@@ -78,6 +79,19 @@
 			padding-right:10%;
 			text-align: justify;
 		}
+		.insta {
+			opacity: 0.7;
+			filter: alpha(opacity=50); /* For IE8 and earlier */
+		}
+		.insta:hover {
+			opacity: 1.0;
+			filter: alpha(opacity=100); /* For IE8 and earlier */
+		}
+		#gallery{
+			background-image: url("gallery-bg.png");
+			margin-right: 10%;
+			margin-left: 10%;
+		}
 	</style>
 	
 	<body>
@@ -96,20 +110,20 @@
 		<hr size="3px" width="58%" color="black">
 		<hr	size="3px" width="58%" color="black">
 			
-		<div>
+		<div id="gallery">
 			<h1 id="subcat"> from instagram </h1>
 			<p style="text-align:center">
 				<a href="https://www.instagram.com/p/BKOMgV1h06x/?taken-by=_eydriyuhn" target="_blank">
-					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14280321_1234212163276797_1523550554_n.jpg?ig_cache_key=MTMzNzA2MTEzODQwMzY0MzA1Nw%3D%3D.2" style="width:400; height:400; padding:30" border="3" alt="pagmamahal-ni-inay">
+					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14280321_1234212163276797_1523550554_n.jpg?ig_cache_key=MTMzNzA2MTEzODQwMzY0MzA1Nw%3D%3D.2" style="width:300; height:300; padding:20; border: 2px solid black" alt="pagmamahal-ni-inay" class="insta">
 				</a>
 				<a href="https://www.instagram.com/p/BKTVp5yBxhN/?taken-by=_eydriyuhn" target="_blank">
-					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14295389_164637553978645_1613835973_n.jpg?ig_cache_key=MTMzODUwODc1Mjc3NzA1ODM4MQ%3D%3D.2" style="width:400; height:400; padding:30" border="3" alt="tulay">
+					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14295389_164637553978645_1613835973_n.jpg?ig_cache_key=MTMzODUwODc1Mjc3NzA1ODM4MQ%3D%3D.2" style="width:300; height:300; padding:20; border: 2px solid black" alt="tulay" class="insta">
 				</a>	
 				<a href="https://www.instagram.com/p/BKU8570hdLv/?taken-by=_eydriyuhn" target="_blank">
-					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14350400_333572740310605_2024852409_n.jpg?ig_cache_key=MTMzODk2Mjg1MzI2ODY3MzI2Mw%3D%3D.2" style="width:400; height:400; padding:30" border="3" alt="lakbay"> 
+					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14350400_333572740310605_2024852409_n.jpg?ig_cache_key=MTMzODk2Mj1MzI2ODY3MzI2Mw%3D%3D.2" style="width:300; height:300; padding:20; border: 2px solid black" alt="lakbay" class="insta">
 				</a>
-				<a href="https://www.instagram.com/p/BKXKENZBurv/?taken-by=_eydriyuhn" target="_blank">
-					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.135.1080.1080/14373941_338848249784509_124719283_n.jpg?ig_cache_key=MTMzOTU4MzY4Mzg4NzU1NzM1OQ%3D%3D.2.c" style="width:400; height:400; padding:30" border="3" alt="alphonsus">
+				<a href="https://www.instagram.com/p/BKXKENZBurv/?taken-by=_eydriyuhn" target="_blank" >
+					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.135.1080.1080/14373941_338848249784509_124719283_n.jpg?ig_cache_key=MTMzOTU4MzY4Mzg4NzU1NzM1OQ%3D%3D.2.c" style="width:300; height:300; padding:20; border: 2px solid black" alt="alphonsus" class="insta">
 				</a>
 			</p>
 		</div>
@@ -125,9 +139,14 @@
 		<br>
 		<hr>
 		
-		<div style="height:18%" id="extramenu">
-			<p>- - - Jimenez, Marc Adrian P. | BSCS-CN151 | APC - - -</p>
-			<p>social media : <a href="https://www.facebook.com/jumanjimenez" target="_blank"><img src="facebook-logo.png" alt="facebook" style="width:110px; height:45px"></a> <a href="https://twitter.com/_eydriyan" target="_blank"><img src="twitter-logo.png" alt="twitter" style="width:110px; height:45px"></a> <a href="https://www.instagram.com/_eydriyuhn/" target="_blank"><img src="instagram-button.png" alt="instagram" style="width:110px; height:45px"></a> .</p>
+		<div>
+			<p style="text-align:center; font-family:goudy old style; font-size: 30; color:black">- - - Jimenez, Marc Adrian P. | BSCS-CN151 | APC - - -</p>
+			<p style="text-align:center; margin-top:0.5em">
+				<a href="https://www.facebook.com/jumanjimenez" target="_blank"><img src="facebook.jpg" alt= "facebook"style="width:60px;height:60px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="https://twitter.com/_eydriyan" target="_blank"><img src="twitter.jpg" alt="twitter" style="width:60px; height:60px"></a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="https://www.instagram.com/_eydriyuhn/" target="_blank"><img src="instagram.jpg" alt="instagram" style="width:60px; height:60px"></a> .
+			</p>
 		</div>
 	</body>
 </html>
