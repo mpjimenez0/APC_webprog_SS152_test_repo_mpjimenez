@@ -163,6 +163,43 @@
 			background-color: #4CAF50;
 			color: white;
 		}
+		.blink {
+			-webkit-animation: blink .75s linear infinite;
+			-moz-animation: blink .75s linear infinite;
+			-ms-animation: blink .75s linear infinite;
+			-o-animation: blink .75s linear infinite;
+			 animation: blink .75s linear infinite;
+		}
+		@-webkit-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@-moz-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@-ms-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@-o-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
 	</style>
 	
 	<body>
@@ -201,7 +238,7 @@
 			<p><b>My Pet-peeve</b> : <br><em id="demo3">** answer **</em></p>
 			<button class="button button1" onclick="document.getElementById('demo3').innerHTML = 'People who think High and Mighty of themselves'; document.getElementById('demo4').style.fontSize='60px'">click for answer</button>
 			
-			<p id="demo4"> YES or NO?? </p>
+			<p class="tab blink" id="demo4"> YES or NO?? </p>
 			
 			<p><b>I can do splits on both legs</b> : <br><em id="demo5">** answer **</em></p>
 			<button class="button button1" onclick="document.getElementById('demo5').innerHTML = 'YES!!'">click for answer</button>
