@@ -7,7 +7,7 @@
 		body{
 			background-image: url("clouds-bg.png");
 			background-attachment: fixed;
-			font-family: Goudy Old Style;
+			font-family: quicksand;
 		}
 		h1{
 			text-align:center; 
@@ -33,13 +33,6 @@
 		p{
 			text-align: center;
 			font-size: 26;
-		}
-		table {
-			font-family:goudy old style;
-			width: 100%;
-			font-size: 25;
-			padding-left: 70;
-			padding-right: 70;
 		}
 		th{
 			background:#FFD1DC;
@@ -144,13 +137,29 @@
 			padding: 10;
 			border: 2px solid black;
 		}
-		.w3-content{max-width:980px;margin:auto}
-		.w3-section{margin-top:16px!important;margin-bottom:16px!important}
+		div.transbox {
+			background-color: rgba(255,255,255,.5);
+			padding:15px;
+		}
+		#gallery{
+			margin-right: 10%;
+			margin-left: 10%;
+		}
+		.w3-content{max-width:980px;margin:auto;}
+		.w3-section{margin-top:16px!important;margin-bottom:16px!important;}
+		@font-face {
+			font-family: quicksand;
+			src: url(quicksand_book.otf);
+		}
+		@font-face {
+			font-family: amethyst;
+			src: url(shorelines.otf);
+		}
 	</style>
 	
 	<body>
-		<div style="text-align:center; margin-top:5em; margin-bottom:1em">
-			<img src="http://fontmeme.com/embed.php?text=metanoia&name=MissBrooks.ttf&size=70&style_color=000000" alt="Cursive Fonts" style="margin-bottom:0.1em">
+		<div style="text-align:center; margin-top:5em; margin-bottom:-30">
+			<p style="font-family: amethyst; font-size: 50px;"> (metanoia) </p>
 		</div>
 		
 		<div id="div.menu">
@@ -176,20 +185,22 @@
 			
 		<div>
 			<h1 style="font-size:40"> from instagram </h1>
-			<p style="text-align:center">
-				<a href="https://www.instagram.com/p/BKOMgV1h06x/?taken-by=_eydriyuhn" target="_blank">
-					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14280321_1234212163276797_1523550554_n.jpg?ig_cache_key=MTMzNzA2MTEzODQwMzY0MzA1Nw%3D%3D.2" style="width:400; height:400; padding:20; border: 2px solid black" alt="pagmamahal-ni-inay" class="insta">
-				</a>
-				<a href="https://www.instagram.com/p/BKTVp5yBxhN/?taken-by=_eydriyuhn" target="_blank">
-					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14295389_164637553978645_1613835973_n.jpg?ig_cache_key=MTMzODUwODc1Mjc3NzA1ODM4MQ%3D%3D.2" style="width:400; height:400; padding:20; border: 2px solid black" alt="tulay" class="insta">
-				</a>	
-				<a href="https://www.instagram.com/p/BKU8570hdLv/?taken-by=_eydriyuhn" target="_blank">
-					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14350400_333572740310605_2024852409_n.jpg?ig_cache_key=MTMzODk2Mj1MzI2ODY3MzI2Mw%3D%3D.2" style="width:400; height:400; padding:20; border: 2px solid black" alt="lakbay" class="insta">
-				</a>
-				<a href="https://www.instagram.com/p/BKXKENZBurv/?taken-by=_eydriyuhn" target="_blank" >
-					<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.135.1080.1080/14373941_338848249784509_124719283_n.jpg?ig_cache_key=MTMzOTU4MzY4Mzg4NzU1NzM1OQ%3D%3D.2.c" style="width:400; height:400; padding:20; border: 2px solid black" alt="alphonsus" class="insta">
-				</a>
-			</p>
+			<div class="transbox" id="gallery">
+				<p style="text-align:center">
+					<a href="https://www.instagram.com/p/BKOMgV1h06x/?taken-by=_eydriyuhn" target="_blank">
+						<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14280321_1234212163276797_1523550554_n.jpg?ig_cache_key=MTMzNzA2MTEzODQwMzY0MzA1Nw%3D%3D.2" style="width:400; height:400; padding:20; border: 2px solid black" alt="pagmamahal-ni-inay" class="insta">
+					</a>
+					<a href="https://www.instagram.com/p/BKTVp5yBxhN/?taken-by=_eydriyuhn" target="_blank">
+						<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14295389_164637553978645_1613835973_n.jpg?ig_cache_key=MTMzODUwODc1Mjc3NzA1ODM4MQ%3D%3D.2" style="width:400; height:400; padding:20; border: 2px solid black" alt="tulay" class="insta">
+					</a>	
+					<a href="https://www.instagram.com/p/BKU8570hdLv/?taken-by=_eydriyuhn" target="_blank">
+						<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14350400_333572740310605_2024852409_n.jpg?ig_cache_key=MTMzODk2Mj1MzI2ODY3MzI2Mw%3D%3D.2" style="width:400; height:400; padding:20; border: 2px solid black" alt="lakbay" class="insta">
+					</a>
+					<a href="https://www.instagram.com/p/BKXKENZBurv/?taken-by=_eydriyuhn" target="_blank" >
+						<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.135.1080.1080/14373941_338848249784509_124719283_n.jpg?ig_cache_key=MTMzOTU4MzY4Mzg4NzU1NzM1OQ%3D%3D.2.c" style="width:400; height:400; padding:20; border: 2px solid black" alt="alphonsus" class="insta">
+					</a>
+				</p>
+			</div>
 		</div>
 		
 		<h1 style="font-size:40"> slideshow </h1>
@@ -236,7 +247,7 @@
 		<hr>
 		
 		<div>
-			<p style="text-align:center; font-family:goudy old style; font-size: 30; color:black">- - - Jimenez, Marc Adrian P. | BSCS-CN151 | APC - - -</p>
+			<p style="text-align:center; font-family:quicksand; font-size: 20; color:black">- - - Jimenez, Marc Adrian P. | BSCS-CN151 | APC - - -</p>
 			<p style="text-align:center; margin-top:0.5em">
 				<a href="https://www.facebook.com/jumanjimenez" target="_blank"><img src="facebook.jpg" alt= "facebook"style="width:60px;height:60px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<a href="https://twitter.com/_eydriyan" target="_blank"><img src="twitter.jpg" alt="twitter" style="width:60px; height:60px"></a>
