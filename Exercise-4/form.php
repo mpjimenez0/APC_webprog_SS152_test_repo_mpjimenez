@@ -253,73 +253,65 @@
 		$name = $homeadd = $cpnum = $nickname = $email = $gender = $comment = $website = "";
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		  if (empty($_POST["name"])) {
-			$nameErr = "Name is required";
-		  } else {
-			$name = test_input($_POST["name"]);
-			// check if name only contains letters and whitespace
-			if (!preg_match("/^[a-zA-Z]*$/",$name)) {
-			  $nameErr = "Only letters and white space allowed";
-			}
-		  }
+		  	if (empty($_POST["name"])) {
+				$nameErr = "Name is required";
+		  	} else {
+				$name = test_input($_POST["name"]);
+				// check if name only contains letters and whitespace
+				if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+					$nameErr = "Only letters and white space allowed";
+					$name = "";
+				}
+		  	}
 
-		if(empty($_POST["nickname"])){
-		  	$nickname = "";
-		}else{
-		  	$nickname = test_input($_POST["nickname"]);
-		  	if (!preg_match("/^[a-zA-Z]*$/",$nickname)) {
-			  $nicknameErr = "Only letters and white space allowed";
+			if(empty($_POST["nickname"])){
+		  		$nickname = "";
+			}else{
+		  		$nickname = test_input($_POST["nickname"]);
+		  		if (!preg_match("/^[a-zA-Z ]*$/",$nickname)) {
+				$nicknameErr = "Only letters and white space allowed";
+				$nickname = "";
+				}
 			}
-		}
 		  
-		if (empty($_POST["email"])) {
+			if (empty($_POST["email"])) {
 			$emailErr = "Email is required";
-		  } else {
-			$email = test_input($_POST["email"]);
-			// check if e-mail address is well-formed
-			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-			  $emailErr = "Invalid email format";
+		  	} else {
+				$email = test_input($_POST["email"]);
+				// check if e-mail address is well-formed
+				if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			  	$emailErr = "Invalid email format";
+			  	$email = "";
+				}
+		  	}
+
+			if(empty($_POST["homeadd"])){
+			  	$homeadd = "";
+			}else{
+			  	$homeadd = test_input($_POST["homeadd"]);
 			}
-		  }
 
-		if(empty($_POST["homeadd"])){
-		  	$homeadd = "";
-		}else{
-		  	$homeadd = test_input($_POST["homeadd"]);
-		}
-			
-		  if (empty($_POST["website"])) {
-			$website = "";
-		  } else {
-			$website = test_input($_POST["website"]);
-			// check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-			if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-			  $websiteErr = "Invalid URL";
-			}
-		  }
+		  	if (empty($_POST["comment"])) {
+				$comment = "";
+		  	} else {
+				$comment = test_input($_POST["comment"]);
+		  	}
 
-		  if (empty($_POST["comment"])) {
-			$comment = "";
-		  } else {
-			$comment = test_input($_POST["comment"]);
-		  }
+		  	if (empty($_POST["gender"])) {
+				$genderErr = "Gender is required";
+		  	} else {
+				$gender = test_input($_POST["gender"]);
+		  	}
 
-		  if (empty($_POST["gender"])) {
-			$genderErr = "Gender is required";
-		  } else {
-			$gender = test_input($_POST["gender"]);
-		  }
-
-		if (empty($_POST["cpnum"])) {
-			$cpnum = "";
-		  } else {
-			$cpnum = test_input($_POST["cpnum"]);
-			if(!preg_match("/^[0-9-]*$/",$cpnum)){
-				$cpnumErr = " &nbsp;Only numbers are allowed";
-			}
-		  }
-
-
+			if (empty($_POST["cpnum"])) {
+				$cpnum = "";
+		  	} else {
+				$cpnum = test_input($_POST["cpnum"]);
+				if(!preg_match("/^[0-9-]*$/",$cpnum)){
+					$cpnumErr = " &nbsp;Only numbers are allowed";
+					$cpnum = "";
+				}
+		  	}
 		}
 
 		function test_input($data) {
@@ -330,7 +322,8 @@
 		}
 		?>
 		<div class="transbox" style="text-align:left">
-		<h2 style="text-align:center">PHP Form Validation Example</h2>
+		<h2 style="text-align:center; font-size: 40px; margin-bottom: -20px">PHP Form Validation Example</h2>
+		<p> Hello guest user, let me know more about you!! </p>
 		<p style="text-align:center"><span class="error">* required field.</span></p>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
 			  	<p style="text-align:left; margin-left:20%">
@@ -362,7 +355,7 @@
 
 		<?php
 			echo "<div class='transbox'><p style='text-align:left; margin-left: 30px'><h2 style='text-align:center;font-size:45px; margin-bottom:-50px; margin-top:-10px'>Your Input:</h2>";
-			echo "<table>";
+			echo "<table  style='margin-top: -60px''>";
 			echo "<tr><th>name: </th><td>";
 			echo $name;
 			echo "</td></tr><br>";
@@ -385,6 +378,9 @@
 			echo $comment;
 			echo "</td></tr>";
 			echo "</table></p></div>";
+			echo "<div class='transbox'><hr>";
+			echo "<p>hello <b>'$nickname'</b> welcome to my webpage!</p>";
+			echo "<hr></div>";
 		?>
 		
 		<p style="text-align:center">
