@@ -1,4 +1,4 @@
-<html>
+	<html>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
 		WEBPROG-Excercise4
@@ -201,6 +201,13 @@
 			50.01% { opacity: 0; }
 			100% { opacity: 0; }
 		}
+		div.transbox {
+			background-color: rgba(255,255,255,.5);
+			margin: 30px;
+			margin-left: 200px;
+			margin-right: 200px;
+			padding:10;
+		}
 		@font-face {
 			font-family: quicksand;
 			src: url(quicksand_book.otf);
@@ -238,10 +245,12 @@
 		<hr size="3px" width="300" color="black">
 		<hr	size="3px" width="70%" color="black">
 		
+		<br>
+		
 		<?php
 		// define variables and set to empty values
-		$nameErr = $emailErr = $genderErr = $websiteErr = "";
-		$name = $email = $gender = $comment = $website = "";
+		$nameErr = $cpnumErr = $nicknameErr = $cpnum = $emailErr = $genderErr = $websiteErr = "";
+		$name = $homeadd = $cpnum = $nickname = $email = $gender = $comment = $website = "";
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		  if (empty($_POST["name"])) {
@@ -249,12 +258,21 @@
 		  } else {
 			$name = test_input($_POST["name"]);
 			// check if name only contains letters and whitespace
-			if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+			if (!preg_match("/^[a-zA-Z]*$/",$name)) {
 			  $nameErr = "Only letters and white space allowed";
 			}
 		  }
+
+		if(empty($_POST["nickname"])){
+		  	$nickname = "";
+		}else{
+		  	$nickname = test_input($_POST["nickname"]);
+		  	if (!preg_match("/^[a-zA-Z]*$/",$nickname)) {
+			  $nicknameErr = "Only letters and white space allowed";
+			}
+		}
 		  
-		  if (empty($_POST["email"])) {
+		if (empty($_POST["email"])) {
 			$emailErr = "Email is required";
 		  } else {
 			$email = test_input($_POST["email"]);
@@ -263,6 +281,12 @@
 			  $emailErr = "Invalid email format";
 			}
 		  }
+
+		if(empty($_POST["homeadd"])){
+		  	$homeadd = "";
+		}else{
+		  	$homeadd = test_input($_POST["homeadd"]);
+		}
 			
 		  if (empty($_POST["website"])) {
 			$website = "";
@@ -285,6 +309,17 @@
 		  } else {
 			$gender = test_input($_POST["gender"]);
 		  }
+
+		if (empty($_POST["cpnum"])) {
+			$cpnum = "";
+		  } else {
+			$cpnum = test_input($_POST["cpnum"]);
+			if(!preg_match("/^[0-9-]*$/",$cpnum)){
+				$cpnumErr = " &nbsp;Only numbers are allowed";
+			}
+		  }
+
+
 		}
 
 		function test_input($data) {
@@ -294,42 +329,63 @@
 		  return $data;
 		}
 		?>
-
-		<h2>PHP Form Validation Example</h2>
-		<p><span class="error">* required field.</span></p>
-		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-		  Name: <input type="text" name="name" value="<?php echo $name;?>">
-		  <span class="error">* <?php echo $nameErr;?></span>
-		  <br><br>
-		  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-		  <span class="error">* <?php echo $emailErr;?></span>
-		  <br><br>
-		  Website: <input type="text" name="website" value="<?php echo $website;?>">
-		  <span class="error"><?php echo $websiteErr;?></span>
-		  <br><br>
-		  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-		  <br><br>
-		  Gender:
-		  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-		  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-		  <span class="error">* <?php echo $genderErr;?></span>
-		  <br><br>
-		  <input type="submit" name="submit" value="Submit">  
-		</form>
+		<div class="transbox" style="text-align:left">
+		<h2 style="text-align:center">PHP Form Validation Example</h2>
+		<p style="text-align:center"><span class="error">* required field.</span></p>
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+			  	<p style="text-align:left; margin-left:20%">
+			  	Name: <br><input type="text" name="name" value="<?php echo $name;?>">
+			  	<span class="error">* <?php echo $nameErr;?></span>
+			  	<br><br>
+			  	Nickname : <br><input type="text" name="nickname" value="<?php echo $nickname;?>">
+			  	<span class="error"><?php echo $nicknameErr;?></span>
+			  	<br><br>
+			  	E-mail: <br><input type="text" name="email" value="<?php echo $email;?>">
+			  	<span class="error">* <?php echo $emailErr;?></span>
+			  	<br><br>
+			  	Home Address : <br><input type="text" name="homeadd" value="<?php echo $homeadd;?>">
+			  	<br><br>
+			  	Gender: <br>
+			  	<input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+			  	<input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+			 	<span class="error">* <?php echo $genderErr;?></span>
+				<br><br>
+			  	Mobile : <br><input type="text" name="cpnum" value="<?php echo $cpnum;?>">
+			  	<span class="error"><?php echo $cpnumErr;?></span>
+			  	<br><br>
+	  		  	Comment: <br><textarea name="comment" rows="3" cols="30"><?php echo $comment;?></textarea>
+			  	<br><br>
+			  	<input type="submit" name="submit" value="Submit">  
+			  	</p>
+			</form>
+		</div>
 
 		<?php
-		echo "<h2>Your Input:</h2>";
-		echo $name;
-		echo "<br>";
-		echo $email;
-		echo "<br>";
-		echo $website;
-		echo "<br>";
-		echo $comment;
-		echo "<br>";
-		echo $gender;
+			echo "<div class='transbox'><p style='text-align:left; margin-left: 30px'><h2 style='text-align:center;font-size:45px; margin-bottom:-50px; margin-top:-10px'>Your Input:</h2>";
+			echo "<table>";
+			echo "<tr><th>name: </th><td>";
+			echo $name;
+			echo "</td></tr><br>";
+			echo "<tr><th>nickname: </th><td>";
+			echo $nickname;
+			echo "</td></tr><br>";
+			echo "<tr><th>email: </th><td>";
+			echo $email;
+			echo "</td></tr><br>";
+			echo "<tr><th>home address: </th><td>";
+			echo $homeadd;
+			echo "</td></tr><br>";
+			echo "<tr><th>gender: </th><td>";
+			echo $gender;
+			echo "</td></tr><br>";
+			echo "<tr><th>Mobile: </th><td>";
+			echo $cpnum;
+			echo "</td></tr><br>";
+			echo "<tr><th>comment: </th><td>";
+			echo $comment;
+			echo "</td></tr>";
+			echo "</table></p></div>";
 		?>
-
 		
 		<p style="text-align:center">
 			<img src="jolteon-m.gif" alt="pokemon-gif" id="div-pic">
