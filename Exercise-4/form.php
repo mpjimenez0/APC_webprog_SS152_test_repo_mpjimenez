@@ -265,7 +265,7 @@
 		  	}
 
 			if(empty($_POST["nickname"])){
-		  		$nickname = "";
+		  		$nicknameErr = "Nickname is required";
 			}else{
 		  		$nickname = test_input($_POST["nickname"]);
 		  		if (!preg_match("/^[a-zA-Z ]*$/",$nickname)) {
@@ -304,7 +304,7 @@
 		  	}
 
 			if (empty($_POST["cpnum"])) {
-				$cpnum = "";
+				$cpnumErr = "Mobile number is required";
 		  	} else {
 				$cpnum = test_input($_POST["cpnum"]);
 				if(!preg_match("/^[0-9-]*$/",$cpnum)){
@@ -323,30 +323,30 @@
 		?>
 		<div class="transbox" style="text-align:left">
 		<h2 style="text-align:center; font-size: 40px; margin-bottom: -20px">PHP Form Validation Example</h2>
-		<p> Hello guest user, let me know more about you!! </p>
+		<p style="font-size: 1.5em"> Hello guest user, let me know more about you!! </p>
 		<p style="text-align:center"><span class="error">* required field.</span></p>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
 			  	<p style="text-align:left; margin-left:20%">
-			  	Name: <br><input type="text" name="name" value="<?php echo $name;?>">
+				Name : <br><input type="text" name="name" value="<?php echo $name;?>">
 			  	<span class="error">* <?php echo $nameErr;?></span>
 			  	<br><br>
 			  	Nickname : <br><input type="text" name="nickname" value="<?php echo $nickname;?>">
-			  	<span class="error"><?php echo $nicknameErr;?></span>
+			  	<span class="error">* <?php echo $nicknameErr;?></span>
 			  	<br><br>
-			  	E-mail: <br><input type="text" name="email" value="<?php echo $email;?>">
+			  	E-mail : <br><input type="text" name="email" value="<?php echo $email;?>">
 			  	<span class="error">* <?php echo $emailErr;?></span>
 			  	<br><br>
 			  	Home Address : <br><input type="text" name="homeadd" value="<?php echo $homeadd;?>">
 			  	<br><br>
-			  	Gender: <br>
+			  	Gender : <br>
 			  	<input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
 			  	<input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
 			 	<span class="error">* <?php echo $genderErr;?></span>
 				<br><br>
 			  	Mobile : <br><input type="text" name="cpnum" value="<?php echo $cpnum;?>">
-			  	<span class="error"><?php echo $cpnumErr;?></span>
+			  	<span class="error">* <?php echo $cpnumErr;?></span>
 			  	<br><br>
-	  		  	Comment: <br><textarea name="comment" rows="3" cols="30"><?php echo $comment;?></textarea>
+	  		  	Comment : <br><textarea name="comment" rows="3" cols="30"><?php echo $comment;?></textarea>
 			  	<br><br>
 			  	<input type="submit" name="submit" value="Submit">  
 			  	</p>
@@ -355,7 +355,7 @@
 
 		<?php
 			echo "<div class='transbox'><p style='text-align:left; margin-left: 30px'><h2 style='text-align:center;font-size:45px; margin-bottom:-50px; margin-top:-10px'>Your Input:</h2>";
-			echo "<table  style='margin-top: -60px''>";
+			echo "<table  style='margin-top: -40px''>";
 			echo "<tr><th>name: </th><td>";
 			echo $name;
 			echo "</td></tr><br>";
@@ -371,7 +371,7 @@
 			echo "<tr><th>gender: </th><td>";
 			echo $gender;
 			echo "</td></tr><br>";
-			echo "<tr><th>Mobile: </th><td>";
+			echo "<tr><th>mobile: </th><td>";
 			echo $cpnum;
 			echo "</td></tr><br>";
 			echo "<tr><th>comment: </th><td>";
