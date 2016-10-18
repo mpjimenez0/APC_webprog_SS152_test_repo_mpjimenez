@@ -226,16 +226,16 @@
 		<div id="div.menu">
 		<ul style="font-size:40" id="subcat">
 			<li>
-				<a href="mypage-p.html" id="headlink">main</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="mypage-p.php" id="headlink">main</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			</li>
 			<li>
-				<a href="mypage2-p.html" id="headlink">gallery</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="mypage2-p.php" id="headlink">gallery</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			</li>
 				<li class="dropdown">
 				<a href="#" class="dropbtn">more...</a>
 				<div class="dropdown-content">
-					<a href="mypage1-p.html" id="headlink">profile</a>
-					<a href="trivia-p.html" id="headlink">trivia</a>
+					<a href="mypage1-p.php" id="headlink">profile</a>
+					<a href="trivia-p.php" id="headlink">trivia</a>
 					<a href="form.php" id="headlink">form</a>
 				</div>
 			</li>
@@ -327,26 +327,26 @@
 		<p style="text-align:center"><span class="error">* required field.</span></p>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
 			  	<p style="text-align:left; margin-left:20%">
-				Name : <br><input type="text" name="name" value="<?php echo $name;?>">
+				<u>Name</u> : <br><input type="text" name="name" value="<?php echo $name;?>">
 			  	<span class="error">* <?php echo $nameErr;?></span>
 			  	<br><br>
-			  	Nickname : <br><input type="text" name="nickname" value="<?php echo $nickname;?>">
+			  	<u>Nickname</u> : <br><input type="text" name="nickname" value="<?php echo $nickname;?>">
 			  	<span class="error">* <?php echo $nicknameErr;?></span>
 			  	<br><br>
-			  	E-mail : <br><input type="text" name="email" value="<?php echo $email;?>">
+			  	<u>E-mail</u> : <br><input type="text" name="email" value="<?php echo $email;?>">
 			  	<span class="error">* <?php echo $emailErr;?></span>
 			  	<br><br>
-			  	Home Address : <br><input type="text" name="homeadd" value="<?php echo $homeadd;?>">
+			  	<u>Home Address</u> : <br><input type="text" name="homeadd" value="<?php echo $homeadd;?>"> &nbsp;
 			  	<br><br>
-			  	Gender : <br>
+			  	<u>Gender</u> : <br>
 			  	<input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
 			  	<input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
 			 	<span class="error">* <?php echo $genderErr;?></span>
 				<br><br>
-			  	Mobile : <br><input type="text" name="cpnum" value="<?php echo $cpnum;?>">
+			  	<u>Mobile</u> : <br><input type="text" name="cpnum" value="<?php echo $cpnum;?>">
 			  	<span class="error">* <?php echo $cpnumErr;?></span>
 			  	<br><br>
-	  		  	Comment : <br><textarea name="comment" rows="3" cols="30"><?php echo $comment;?></textarea>
+	  		  	<u>Comment</u> : <br><textarea name="comment" rows="3" cols="30"><?php echo $comment;?></textarea>
 			  	<br><br>
 			  	<input type="submit" name="submit" value="Submit">  
 			  	</p>
@@ -379,7 +379,7 @@
 			echo "</td></tr>";
 			echo "</table></p></div>";
 			echo "<div class='transbox'><hr>";
-			echo "<p>hello <b>'$nickname'</b> welcome to my webpage!</p>";
+			echo "<p>hello <b>'<u>$nickname</u>'</b> welcome to my webpage!</p>";
 			echo "<hr></div>";
 		?>
 		
