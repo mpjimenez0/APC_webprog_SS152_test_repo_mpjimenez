@@ -137,70 +137,6 @@
 		.dropdown:hover .dropdown-content { 
 			display: block;
 		}
-		
-		.button {
-			background-color: transparent; /* Green */
-			border: none;
-			color: white;
-			padding: 4px 8px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 16px;
-			margin: 4px 2px;
-			-webkit-transition-duration: 0.4s; /* Safari */
-			transition-duration: 0.4s;
-			cursor: pointer;
-		}
-
-		.button1 {
-			background-color: #9292b4;
-			color: black; 
-			border: 2px solid black;
-		}
-
-		.button1:hover {
-			background-color: #9292b4;
-			color: white;
-			border: 2px solid white;
-		}
-		.blink {
-			-webkit-animation: blink .75s linear infinite;
-			-moz-animation: blink .75s linear infinite;
-			-ms-animation: blink .75s linear infinite;
-			-o-animation: blink .75s linear infinite;
-			 animation: blink .75s linear infinite;
-		}
-		@-webkit-keyframes blink {
-			0% { opacity: 1; }
-			50% { opacity: 1; }
-			50.01% { opacity: 0; }
-			100% { opacity: 0; }
-		}
-		@-moz-keyframes blink {
-			0% { opacity: 1; }
-			50% { opacity: 1; }
-			50.01% { opacity: 0; }
-			100% { opacity: 0; }
-		}
-		@-ms-keyframes blink {
-			0% { opacity: 1; }
-			50% { opacity: 1; }
-			50.01% { opacity: 0; }
-			100% { opacity: 0; }
-		}
-		@-o-keyframes blink {
-			0% { opacity: 1; }
-			50% { opacity: 1; }
-			50.01% { opacity: 0; }
-			100% { opacity: 0; }
-		}
-		@keyframes blink {
-			0% { opacity: 1; }
-			50% { opacity: 1; }
-			50.01% { opacity: 0; }
-			100% { opacity: 0; }
-		}
 		@font-face {
 			font-family: quicksand;
 			src: url(quicksand_book.otf);
@@ -219,42 +155,46 @@
 		<div id="div.menu">
 		<ul style="font-size:40" id="subcat">
 			<li>
-				<a href="mypage-p.html" id="headlink">main</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="mypage-p.php" id="headlink">main</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			</li>
 			<li>
-				<a href="mypage2-p.html" id="headlink">gallery</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="mypage2-p.php" id="headlink">gallery</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			</li>
 				<li class="dropdown">
 				<a href="#" class="dropbtn">more...</a>
 				<div class="dropdown-content">
-					<a href="mypage1-p.html" id="headlink">profile</a>
-					<a href="trivia-p.html" id="headlink">trivia</a>
+					<a href="mypage1-p.php" id="headlink">profile</a>
+					<a href="trivia-p.php" id="headlink">trivia</a>
 					<a href="form.php" id="headlink">form</a>
 				</div>
 			</li>
 		</ul>
 		</div>
-		
-		<hr size="3px" width="300" color="black">
-		<hr	size="3px" width="70%" color="black">
+
+		<hr size="3px" width="58%" color="black">
+		<hr	size="3px" width="58%" color="black">
 		
 		<div>
-			<p><b>My Favorite viand</b> : <br><em id="demo1">** answer **</em></p>
-			<button class="button button1" onclick="document.getElementById('demo1').innerHTML = 'KARE-KARE!!!'">click for answer</button>
-			
-			<p><b>My favorite ice-cream flavor</b> : <br><em id="demo2">** answer **</em></p>
-			<button class="button button1" onclick="document.getElementById('demo2').innerHTML = 'Avocado or Bubblegum'">click for answer</button>
-			
-			<p><b>My Pet-peeve</b> : <br><em id="demo3">** answer **</em></p>
-			<button class="button button1" onclick="document.getElementById('demo3').innerHTML = 'People who think High and Mighty of themselves'; document.getElementById('demo4').style.fontSize='60px'">click for answer</button>
-			
-			<p class="tab blink" id="demo4"> YES or NO?? </p>
-			
-			<p><b>I can do splits on both legs</b> : <br><em id="demo5">** answer **</em></p>
-			<button class="button button1" onclick="document.getElementById('demo5').innerHTML = 'YES!!'">click for answer</button>
-			
-			<p><b>I love taking care of kids</b> : <br><em id="demo6">** answer **</em></p>
-			<button class="button button1" onclick="document.getElementById('demo6').innerHTML = 'No... All of them annoy me.'">click for answer</button>
+			<h2 style="font-size:40"> <b>personal info</b> </h2>
+			<p id="left">
+				<b class="normal-title">Name:</b> Jimenez, Marc Adrian P.<br><br>
+				<b class="normal-title">Nickname:</b> Marc / Marcla / <del>Balong</del> / Menez<br><br>
+				<b class="normal-title">Address:</b> 2047 F. Munoz St. Malate, Manila<br><br>
+				<b class="normal-title">Phone #:</b> (02)400-27-06 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<b class="normal-title">Cellphone #:</b> 09260198935<br><br>
+				<b class="normal-title">Birthdate:</b> August 8, 1999 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<b class="normal-title">Zodiac Sign:</b> Leo<br><br>
+				<b class="normal-title">Personal Email:</b> <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				<b class="normal-title">Yahoo:</b> marcjimenez@yahoo.com.ph<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				<b class="normal-title">Gmail:</b> cramjimenez07@gmail.com<br><br>
+				<b class="normal-title">School Email:</b> mpjimenez@student.apc.edu.ph<br><br>
+				<b class="normal-title">School:</b> Asia Pacific College - SoCIT<br><br>
+				<b class="normal-title">Course:</b> BSCS-CN (Bachelor of Science in Computer Science specializing in Computer Networks)<br>
+			</p>
 		</div>
 		
 		<p style="text-align:center">
@@ -269,7 +209,7 @@
 		<hr>
 		
 		<div>
-			<p style="text-align:center; font-family:quicksand; font-size: 20; color:black">- - - Jimenez, Marc Adrian P. | BSCS-CN151 | APC - - -</p>
+			<p style="text-align:center; font-family: quicksand; font-size: 20; color:black">- - - Jimenez, Marc Adrian P. | BSCS-CN151 | APC - - -</p>
 			<p style="text-align:center; margin-top:0.5em">
 				<a href="https://www.facebook.com/jumanjimenez" target="_blank"><img src="facebook.jpg" alt= "facebook"style="width:60px;height:60px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<a href="https://twitter.com/_eydriyan" target="_blank"><img src="twitter.jpg" alt="twitter" style="width:60px; height:60px"></a>
