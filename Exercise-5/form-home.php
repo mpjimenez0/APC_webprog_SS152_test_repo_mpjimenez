@@ -164,21 +164,21 @@ if(isset($_GET['delete_id']))
 			src: url(shorelines.otf);
 		}
 	</style>
-		<script type="text/javascript">
-	function edt_id(id)
-	{
-	 if(confirm('Sure to edit ?'))
-	 {
-	  window.location.href='edit.php?edit_id='+id;
-	 }
-	}
-	function delete_id(id)
-	{
-	 if(confirm('Sure to Delete ?'))
-	 {
-	  window.location.href='form-home.php?delete_id='+id;
-	 }
-	}
+	<script type="text/javascript">
+		function edt_id(id)
+		{
+		 if(confirm('Sure to edit ?'))
+		 {
+		  window.location.href='edit.php?edit_id='+id;
+		 }
+		}
+		function delete_id(id)
+		{
+		 if(confirm('Sure to Delete ?'))
+		 {
+		  window.location.href='form-home.php?delete_id='+id;
+		 }
+		}
 	</script>
 	<body>
 		<div style="text-align:center; margin-top:5em; margin-bottom:-30">
@@ -227,13 +227,20 @@ if(isset($_GET['delete_id']))
 				{
 			?>
 				<tr>
-					<td><?php echo $row[1]; ?></td>
-					<td><?php echo $row[2]; ?></td>
+					<td><?php echo $row[2],', ', $row[1]; ?></td>
+					<!-- Name = First Name + Last Name -->
 					<td><?php echo $row[3]; ?></td>
+					<!-- Nickname -->
 					<td><?php echo $row[4]; ?></td>
+					<!-- Email -->
 					<td><?php echo $row[5]; ?></td>
+					<!-- Address -->
 					<td><?php echo $row[6]; ?></td>
+					<!-- Gender-->
 					<td><?php echo $row[7]; ?></td>
+					<!-- Mobile -->
+					<td><?php echo $row[8]; ?></td>
+					<!-- Comment -->
 					<td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="edit.png" style="width:30px;height:30px" align="EDIT"></a></td>
 					<td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="drop.png" style="width:30px;height:30px" align="DELETE"></a></td>
 				</tr>
@@ -241,7 +248,7 @@ if(isset($_GET['delete_id']))
 			}
 			?>
 			<tr>
-				<th colspan="8" style="text-align:center" class = "add"><a href="add.php">add data here</a></th>
+				<th colspan="9" style="text-align:center" class = "add"><a href="add.php">add data here</a></th>
 			</tr>
 		</table>
 
