@@ -56,7 +56,7 @@ if(isset($_GET['delete_id']))
 			background:#FFD1DC;
 		}
 		th.add{
-			background:pink;
+			background:#c7b8e4;
 		}
 		td, th {
 			border: 3px solid #000000;
