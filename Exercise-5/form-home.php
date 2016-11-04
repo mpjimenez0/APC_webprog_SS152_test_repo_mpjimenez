@@ -214,7 +214,7 @@ if(isset($_GET['delete_id']))
 				<th style="font-size:25"><b>Name</b></th>
 				<th style="font-size:25"><b>Nickname</b></th>
 				<th style="font-size:25"><b>E-mail</th>
-				<th style="font-size:25"><b>Address</b></th>
+				<th style="font-size:25"><b>Home</b></th>
 				<th style="font-size:25"><b>Gender</th>
 				<th style="font-size:25"><b>Mobile</th>
 				<th style="font-size:25"><b>Comment</th>

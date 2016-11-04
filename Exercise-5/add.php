@@ -5,12 +5,18 @@ if(isset($_POST['btn-save']))
  // variables for input data
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
+ $nickname = $_POST['nickname'];
+ $email = $_POST['email'];
  $city_name = $_POST['city_name'];
+ $gender = $_POST['gender'];
+ $mobile = $_POST['mobile'];
+ $comment = $_POST['comment'];
+ 
  // variables for input data
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
+        $sql_query = "INSERT INTO users(first_name,last_name,nickname,email,user_city,gender, mobile, comment) VALUES('$first_name','$last_name','$nickname','$email','$city_name','$gender','$mobile','$comment')";
  mysqli_query($con,$sql_query);
         
         // sql query for inserting data into database
@@ -50,7 +56,7 @@ if(isset($_POST['btn-save']))
 		}
 		p{
 			text-align: center;
-			font-size: 26;
+			font-size: 30;
 		}
 		table {
 			font-family: quicksand;
@@ -170,8 +176,8 @@ if(isset($_POST['btn-save']))
 		div.transbox {
 			background-color: rgba(255,255,255,.5);
 			margin: 30px;
-			margin-left: 500px;
-			margin-right: 500px;
+			margin-left: 450px;
+			margin-right: 450px;
 			padding:10;
 		}
 	</style>
@@ -230,8 +236,23 @@ if(isset($_POST['btn-save']))
 			   Last Name: <br>
 			   <input type="text" name="last_name" placeholder="Last Name" required>
 			   <br><br>
-			   City: <br>
+			   Nickname: <br>
+			   <input type="text" name="nickname" placeholder="Nickname" required>
+			   <br><br>
+			   Email: <br>
+			   <input type="text" name="email" placeholder="Email Address" required>
+			   <br><br>
+			   Home: <br>
 			   <input type="text" name="city_name" placeholder="City" required>
+			   <br><br>
+			   Gender: <br>
+			   <input type="text" name="gender" placeholder="Gender" required>
+			   <br><br>
+			   Mobile: <br>
+			   <input type="text" name="mobile" placeholder="Mobile Num" required>
+			   <br><br>
+			   Comment: <br>
+			   <input type="text" name="comment" placeholder="Comment">
 			</p>
 			<button type="submit" name="btn-save"><strong>SAVE</strong>
 			</form>
