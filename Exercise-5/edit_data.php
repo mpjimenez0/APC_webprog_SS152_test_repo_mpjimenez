@@ -24,7 +24,7 @@ if(isset($_POST['btn-update']))
   ?>
   <script type="text/javascript">
   alert('Data Are Updated Successfully');
-  window.location.href='index.php';
+  window.location.href='fhome.php';
   </script>
   <?php
  }
@@ -40,7 +40,7 @@ if(isset($_POST['btn-update']))
 }
 if(isset($_POST['btn-cancel']))
 {
- header("Location: index.php");
+ header("Location: fhome.php");
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
