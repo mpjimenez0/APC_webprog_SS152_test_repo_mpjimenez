@@ -245,24 +245,23 @@ if(isset($_POST['btn-cancel']))
 		<hr	size="3px" width="58%" color="black">
 
 		<div class="transbox">
+			<h1 style="font-size:40px"> EDIT DATA </h1>
 			<form method="post">
-				<table align="center">
-					<tr>
-						<td><input type="text" name="first_name" placeholder="First Name" value="<?php echo $fetched_row['first_name']; ?>" required /></td>
-					</tr>
-					<tr>
-						<td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
-					</tr>
-					<tr>
-						<td><input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
-					</tr>
-					<tr>
-					<td>
-						<button type="submit" name="btn-update"><strong>UPDATE</strong></button>
-						<button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
-					</td>
-					</tr>
-				</table>
+				<p>First Name:<br>
+				    <input type="text" name="first_name" placeholder="First Name" value="<?php echo $fetched_row['first_name']; ?>" required>
+				    <br>
+				    <br>
+					Last Name:<br>
+					<input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required>
+					<br>
+					<br>
+					City Name:<br>
+					<input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required>
+					<br>
+					<br>
+					<button type="submit" name="btn-update"><strong>UPDATE</strong></button>
+					<button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
+				  </p>
 			</form>
 		</div>
 

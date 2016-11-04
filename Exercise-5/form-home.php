@@ -210,12 +210,16 @@ if(isset($_GET['delete_id']))
 		<br>
 		
 		<table cellspacing="7" >
-			<tr>
-				<th style="font-size:38"><b>First Name</b></th>
-				<th style="font-size:38"><b>Last Name</b></th>
-				<th style="font-size:38"><b>City Name</b></th>
-				<th style="font-size:38" colspan="2"><b>Operations</b></th>
-			</tr>
+			<tr><center>
+				<th style="font-size:25"><b>Name</b></th>
+				<th style="font-size:25"><b>Nickname</b></th>
+				<th style="font-size:25"><b>E-mail</th>
+				<th style="font-size:25"><b>Address</b></th>
+				<th style="font-size:25"><b>Gender</th>
+				<th style="font-size:25"><b>Mobile</th>
+				<th style="font-size:25"><b>Comment</th>
+				<th style="font-size:25" colspan="2"><b>etc..</b></th>
+			</center></tr>
 			<?php
 				$sql_query="SELECT * FROM users";
 				$result_set=mysqli_query($con,$sql_query);
@@ -226,14 +230,18 @@ if(isset($_GET['delete_id']))
 					<td><?php echo $row[1]; ?></td>
 					<td><?php echo $row[2]; ?></td>
 					<td><?php echo $row[3]; ?></td>
-					<td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT"></a></td>
-					<td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE"></a></td>
+					<td><?php echo $row[4]; ?></td>
+					<td><?php echo $row[5]; ?></td>
+					<td><?php echo $row[6]; ?></td>
+					<td><?php echo $row[7]; ?></td>
+					<td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="edit.png" style="width:30px;height:30px" align="EDIT"></a></td>
+					<td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="drop.png" style="width:30px;height:30px" align="DELETE"></a></td>
 				</tr>
 			<?php
 			}
 			?>
 			<tr>
-				<th colspan="5" style="text-align:center" class = "add"><a href="add.php">add data here</a></th>
+				<th colspan="8" style="text-align:center" class = "add"><a href="add.php">add data here</a></th>
 			</tr>
 		</table>
 

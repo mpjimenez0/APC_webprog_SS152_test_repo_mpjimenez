@@ -219,6 +219,7 @@ if(isset($_POST['btn-save']))
 		<hr	size="3px" width="58%" color="black">
 
 		<div class="transbox">
+			<h1 style="font-size:40px">ADD DATA</h1>
 			<form method="post">
 			<p><a href="form-home.php"><strong>*back to main page*</strong></a> 
 			   <br>
