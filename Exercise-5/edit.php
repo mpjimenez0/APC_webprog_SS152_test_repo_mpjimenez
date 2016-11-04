@@ -241,7 +241,7 @@ if(isset($_POST['btn-cancel']))
 					<div class="dropdown-content">
 						<a href="mypage1-p.php" id="headlink">profile</a>
 						<a href="trivia-p.php" id="headlink">trivia</a>
-						<a href="form.php" id="headlink">form</a>
+						<a href="form-home.php" id="headlink">form</a>
 					</div>
 				</li>
 			</ul>
