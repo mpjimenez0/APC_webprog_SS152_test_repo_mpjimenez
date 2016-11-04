@@ -228,31 +228,32 @@ if(isset($_POST['btn-save']))
 			<h1 style="font-size:40px">ADD DATA</h1>
 			<form method="post">
 			<p><a href="form-home.php"><strong>*back to main page*</strong></a> 
-			   <br>
-			   <br>
-			   First Name: <br>
-			   <input type="text" name="first_name" placeholder="First Name" required>
-			   <br><br>
-			   Last Name: <br>
-			   <input type="text" name="last_name" placeholder="Last Name" required>
-			   <br><br>
-			   Nickname: <br>
-			   <input type="text" name="nickname" placeholder="Nickname" required>
-			   <br><br>
-			   Email: <br>
-			   <input type="text" name="email" placeholder="Email Address" required>
-			   <br><br>
-			   Home: <br>
-			   <input type="text" name="city_name" placeholder="City" required>
-			   <br><br>
-			   Gender: <br>
-			   <input type="text" name="gender" placeholder="Gender" required>
-			   <br><br>
-			   Mobile: <br>
-			   <input type="text" name="mobile" placeholder="Mobile Num" required>
-			   <br><br>
-			   Comment: <br>
-			   <input type="text" name="comment" placeholder="Comment">
+				<br>
+				<br>
+				First Name: <br>
+				<input type="text" name="first_name" placeholder="First Name" required>
+				<br><br>
+				Last Name: <br>
+				<input type="text" name="last_name" placeholder="Last Name" required>
+				<br><br>
+				Nickname: <br>
+				<input type="text" name="nickname" placeholder="Nickname" required>
+				<br><br>
+				Email: <br>
+				<input type="text" name="email" placeholder="Email Address" required>
+				<br><br>
+				Home: <br>
+				<input type="text" name="city_name" placeholder="City" required>
+				<br><br>
+				Gender: <br>
+				<input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+				<input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+				<br><br>
+				Mobile: <br>
+				<input type="text" name="mobile" placeholder="Mobile Num" required>
+				<br><br>
+				Comment: <br>
+				<input type="text" name="comment" placeholder="Comment">
 			</p>
 			<button type="submit" name="btn-save"><strong>SAVE</strong>
 			</form>
