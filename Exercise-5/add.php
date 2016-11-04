@@ -253,7 +253,7 @@ if(isset($_POST['btn-save']))
 				<input type="text" name="mobile" placeholder="Mobile Num" required>
 				<br><br>
 				Comment: <br>
-				<input type="text" name="comment" placeholder="Comment">
+				<textarea name="comment" placeholder="insert comment here" rows="3" cols="30"></textarea>
 			</p>
 			<button type="submit" name="btn-save"><strong>SAVE</strong>
 			</form>

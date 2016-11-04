@@ -11,11 +11,17 @@ if(isset($_POST['btn-update']))
  // variables for input data
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
+ $nickname = $_POST['nickname'];
+ $email = $_POST['email'];
  $city_name = $_POST['city_name'];
+ $gender = $_POST['gender'];
+ $mobile = $_POST['mobile'];
+ $comment = $_POST['comment'];
+ 
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name' WHERE user_id=".$_GET['edit_id'];
+ $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',nickname ='$nickname', email='$email',  user_city='$city_name', gender='$gender', mobile='$mobile', comment = '$comment' WHERE user_id=".$_GET['edit_id'];
  // sql query for update data into database
  
  // sql query execution function
@@ -247,16 +253,31 @@ if(isset($_POST['btn-cancel']))
 		<div class="transbox">
 			<h1 style="font-size:40px"> EDIT DATA </h1>
 			<form method="post">
-				<p>First Name:<br>
-				    <input type="text" name="first_name" placeholder="First Name" value="<?php echo $fetched_row['first_name']; ?>" required>
-				    <br>
-				    <br>
-					Last Name:<br>
+				<p>
+					First Name: <br>
+					<input type="text" name="first_name" placeholder="First Name" value="<?php echo $fetched_row['first_name']; ?>" required>
+					<br><br>
+					Last Name: <br>
 					<input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required>
-					<br>
-					<br>
-					City Name:<br>
-					<input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required>
+					<br><br>
+					Nickname: <br>
+					<input type="text" name="nickname" placeholder="Nickname" value="<?php echo $fetched_row['nickname']; ?>" required>
+					<br><br>
+					Email: <br>
+					<input type="text" name="email" placeholder="Email Address" value="<?php echo $fetched_row['email']; ?>" required>
+					<br><br>
+					Home: <br>
+					<input type="text" name="city_name" placeholder="City"  value="<?php echo $fetched_row['user_city']; ?>" required>
+					<br><br>
+					Gender: <br>
+					<input type="radio" name="gender" <?php if ($fetched_row['gender']=="Female") echo "checked";?> value="Female">Female
+					<input type="radio" name="gender" <?php if ($fetched_row['gender']=="Male") echo "checked";?> value="Male">Male
+					<br><br>
+					Mobile: <br>
+					<input type="text" name="mobile" placeholder="Mobile Num" value="<?php echo $fetched_row['mobile']; ?>" required>
+					<br><br>
+					Comment: <br>
+					<textarea name="comment" placeholder="insert comment here" rows="3" cols="30" value="<?php echo $fetched_row['comment']; ?>"><?php echo $fetched_row['comment']; ?></textarea>
 					<br>
 					<br>
 					<button type="submit" name="btn-update"><strong>UPDATE</strong></button>

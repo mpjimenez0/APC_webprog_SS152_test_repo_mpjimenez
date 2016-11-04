@@ -227,7 +227,7 @@ if(isset($_GET['delete_id']))
 				{
 			?>
 				<tr>
-					<td><?php echo $row[2],', ', $row[1]; ?></td>
+					<td><b><?php echo $row[2],'</b>, ', $row[1]; ?></td>
 					<!-- Name = First Name + Last Name -->
 					<td><?php echo $row[3]; ?></td>
 					<!-- Nickname -->
