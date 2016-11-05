@@ -6,76 +6,18 @@
 	
 	if(isset($_POST['btn-save']))
 	{
-		if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		if (empty($_POST['$first_name'])) {
-			$first_nameErr = "Name is required";
-		} else {
-			$first_name = test_input($_POST["first_name"]);
-			// check if name only contains letters and whitespace
-			if (!preg_match("/^[a-zA-Z ]*$/",$first_name)) {
-				$first_nameErr = "Only letters and white space allowed";
-				$first_name = "";
-			}
-	  	}
-		
-		if (empty($_POST['$last_name'])) {
-			$last_nameErr = "Name is required";
-		} else {
-			$last_name = test_input($_POST["last_name"]);
-			// check if name only contains letters and whitespace
-			if (!preg_match("/^[a-zA-Z ]*$/",$last_name)) {
-				$last_nameErr = "Only letters and white space allowed";
-				$last_name = "";
-			}
-	  	}
-		
-		if(empty($_POST["nickname"])){
-	  		$nicknameErr = "Nickname is required";
-		}else{
-	  		$nickname = test_input($_POST["nickname"]);
-	  		if (!preg_match("/^[a-zA-Z ]*$/",$nickname)) {
-			$nicknameErr = "Only letters and white space allowed";
-			$nickname = "";
-			}
-		}
-		
-		if (empty($_POST["email"])) {
-			$emailErr = "Email is required";
-	  	} else {
-			$email = test_input($_POST["email"]);
-			// check if e-mail address is well-formed
-			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-				$emailErr = "Invalid email format";
-				$email = "";
-			}
-	  	}
-		
-		if(empty($_POST["city_name"])){
-		  	$city_name = "";
-		}else{
-		  	$city_name = test_input($_POST["city_name"]);
-		}
-		
-	  	if (empty($_POST["gender"])) {
-			$genderErr = "Gender is required";
-	  	} else {
-			$gender = test_input($_POST["gender"]);
-	  	}
-		
-		if (empty($_POST["mobile"])) {
-			$mobileErr = "Mobile number is required";
-	  	} else {
-			$mobile = test_input($_POST["mobile"]);
-			if(!preg_match("/^[0-9-]*$/",$mobile)){
-				$mobileErr = " &nbsp;Only numbers are allowed";
-				$mobile = "";
-			}
-	  	}
-
+		// variables for input data
+		$first_name = $_POST['first_name'];
+		$last_name = $_POST['last_name'];
+		$nickname = $_POST['nickname'];
+		$email = $_POST['email'];
+		$city_name = $_POST['city_name'];
+		$gender = $_POST['gender'];
+		$mobile = $_POST['mobile'];
+		$comment = $_POST['comment'];
 		$sql_query = "INSERT INTO users(first_name,last_name,nickname,email,user_city,gender, mobile, comment) VALUES('$first_name','$last_name','$nickname','$email','$city_name','$gender','$mobile','$comment')";
 		mysqli_query($con,$sql_query);
 		// sql query for inserting data into database
-		}
 	}
 	function test_input($data) {
 		$data = trim($data);
