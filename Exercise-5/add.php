@@ -176,8 +176,8 @@ if(isset($_POST['btn-save']))
 		div.transbox {
 			background-color: rgba(255,255,255,.5);
 			margin: 30px;
-			margin-left: 450px;
-			margin-right: 450px;
+			margin-left: 600px;
+			margin-right: 600px;
 			padding:10;
 		}
 		.error {color: #FF0000;}
@@ -225,8 +225,8 @@ if(isset($_POST['btn-save']))
 		<hr size="3px" width="58%" color="black">
 		<hr	size="3px" width="58%" color="black">
 		
-		<div class="transbox">
-			<h1 style="font-size:40px">ADD DATA</h1>
+		<h1 style="font-size:60px;margin-top:25px">ADD DATA</h1>
+		<div class="transbox" style="margin-top:-20px">
 			<form method="post">
 			<p><a href="form-home.php"><strong>*back to main page*</strong></a> 
 				<br>
