@@ -333,9 +333,9 @@
 			  	<u>Nickname</u> : <br><input type="text" name="nickname" value="<?php echo $nickname;?>">
 			  	<span class="error">* <?php echo $nicknameErr;?></span>
 			  	<br><br>
-			  	<u>E-mail</u> : <br><input type="text" name="email" value="<?php echo $email;?>">
+			  	<u>E-mail</u> : <br><input type="text" name="email" value="<?php echo $email;?>"><br>
 			  	<span class="error">* <?php echo $emailErr;?></span>
-			  	<br><br>
+				<br>
 			  	<u>Home Address</u> : <br><input type="text" name="homeadd" value="<?php echo $homeadd;?>"> &nbsp;
 			  	<br><br>
 			  	<u>Gender</u> : <br>
