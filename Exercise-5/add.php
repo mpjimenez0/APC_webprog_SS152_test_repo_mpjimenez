@@ -1,23 +1,59 @@
 <?php
 	include_once 'dbconfig.php';
-	$first_name = $last_name = $nickname = $email = $city_name = $gender = $mobile = $comment = "";
-		
-	$first_nameErr = $last_nameErr = $nicknameErr = $emailErr = $city_nameErr = $genderErr = $mobileErr = $commentErr = "";
-	
+		$first_nameErr = $last_nameErr = $nicknameErr = $emailErr = $city_nameErr = $genderErr = $mobileErr = $commentErr = "";
 	if(isset($_POST['btn-save']))
 	{
-		// variables for input data
-		$first_name = $_POST['first_name'];
-		$last_name = $_POST['last_name'];
-		$nickname = $_POST['nickname'];
-		$email = $_POST['email'];
-		$city_name = $_POST['city_name'];
-		$gender = $_POST['gender'];
-		$mobile = $_POST['mobile'];
-		$comment = $_POST['comment'];
-		$sql_query = "INSERT INTO users(first_name,last_name,nickname,email,user_city,gender, mobile, comment) VALUES('$first_name','$last_name','$nickname','$email','$city_name','$gender','$mobile','$comment')";
-		mysqli_query($con,$sql_query);
-		// sql query for inserting data into database
+		$error = "";
+		$first_name = test_input($_POST["first_name"]);
+		// check if name only contains letters and whitespace
+		if (!preg_match("/^[a-zA-Z ]*$/",$first_name)) {
+			$first_nameErr = "Only letters and white space allowed";
+			$first_name = "";
+			$error = "firstname";
+		}
+		
+		$last_name = test_input($_POST["last_name"]);
+		// check if name only contains letters and whitespace
+		if (!preg_match("/^[a-zA-Z ]*$/",$last_name)) {
+			$last_nameErr = "Only letters and white space allowed";
+			$last_name = "";
+			$error = "lastname";
+		}
+		
+	  	$nickname = test_input($_POST["nickname"]);
+	  	if (!preg_match("/^[a-zA-Z ]*$/",$nickname)) {
+			$nicknameErr = "Only letters and white space allowed";
+			$nickname = "";
+			$error = "nickname";
+		}
+		
+		$email = test_input($_POST["email"]);
+		// check if e-mail address is well-formed
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			$emailErr = "Invalid email format";
+			$email = "";
+			$error = "email";
+		}
+		
+		$city_name = test_input($_POST["city_name"]);
+		
+		$comment = test_input($_POST["comment"]);
+		
+		$gender = test_input($_POST["gender"]);
+		
+		$mobile = test_input($_POST["mobile"]);
+		
+		if(!preg_match("/^[0-9-]*$/",$mobile)){
+			$mobileErr = " &nbsp;Only numbers are allowed";
+			$mobile = "";
+			$error = "mobile";
+		}
+		
+		if($error === ""){
+			$sql_query = "INSERT INTO users(first_name,last_name,nickname,email,user_city,gender, mobile, comment) VALUES('$first_name','$last_name','$nickname','$email','$city_name','$gender','$mobile','$comment')";
+			mysqli_query($con,$sql_query);
+			// sql query for inserting data into database
+		}
 	}
 	function test_input($data) {
 		$data = trim($data);
@@ -183,7 +219,12 @@
 			margin-right: 600px;
 			padding:10;
 		}
-		.error {color: #FF0000;}
+		.error {
+			color: #FF0000;
+		}
+		input[type=text]:focus{
+			width: 50%;
+		}
 	</style>
 	<script type="text/javascript">
 		function edt_id(id)
