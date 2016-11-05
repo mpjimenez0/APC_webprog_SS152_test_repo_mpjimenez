@@ -180,22 +180,23 @@ if(isset($_POST['btn-save']))
 			margin-right: 450px;
 			padding:10;
 		}
+		.error {color: #FF0000;}
 	</style>
-		<script type="text/javascript">
-	function edt_id(id)
-	{
-	 if(confirm('Sure to edit ?'))
-	 {
-	  window.location.href='edit_data.php?edit_id='+id;
-	 }
-	}
-	function delete_id(id)
-	{
-	 if(confirm('Sure to Delete ?'))
-	 {
-	  window.location.href='index.php?delete_id='+id;
-	 }
-	}
+	<script type="text/javascript">
+		function edt_id(id)
+		{
+		 if(confirm('Sure to edit ?'))
+		 {
+		  window.location.href='edit_data.php?edit_id='+id;
+		 }
+		}
+		function delete_id(id)
+		{
+		 if(confirm('Sure to Delete ?'))
+		 {
+		  window.location.href='index.php?delete_id='+id;
+		 }
+		}
 	</script>
 	<body>
 		<div style="text-align:center; margin-top:5em; margin-bottom:-30">
@@ -223,7 +224,7 @@ if(isset($_POST['btn-save']))
 		
 		<hr size="3px" width="58%" color="black">
 		<hr	size="3px" width="58%" color="black">
-
+		
 		<div class="transbox">
 			<h1 style="font-size:40px">ADD DATA</h1>
 			<form method="post">
@@ -246,8 +247,8 @@ if(isset($_POST['btn-save']))
 				<input type="text" name="city_name" placeholder="City" required>
 				<br><br>
 				Gender: <br>
-				<input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-				<input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+				<input type="radio" name="gender" value="female">Female
+				<input type="radio" name="gender" value="male">Male
 				<br><br>
 				Mobile: <br>
 				<input type="text" name="mobile" placeholder="Mobile Num" required>

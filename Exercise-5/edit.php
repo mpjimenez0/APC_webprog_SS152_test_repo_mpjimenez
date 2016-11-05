@@ -206,22 +206,23 @@ if(isset($_POST['btn-cancel']))
 			margin-right: 500px;
 			padding:10;
 		}
+		.error {color: #FF0000;}
 	</style>
-		<script type="text/javascript">
-	function edt_id(id)
-	{
-	 if(confirm('Sure to edit ?'))
-	 {
-	  window.location.href='edit.php?edit_id='+id;
-	 }
-	}
-	function delete_id(id)
-	{
-	 if(confirm('Sure to Delete ?'))
-	 {
-	  window.location.href='form-home.php?delete_id='+id;
-	 }
-	}
+	<script type="text/javascript">
+		function edt_id(id)
+		{
+		 if(confirm('Sure to edit ?'))
+		 {
+		  window.location.href='edit.php?edit_id='+id;
+		 }
+		}
+		function delete_id(id)
+		{
+		 if(confirm('Sure to Delete ?'))
+		 {
+		  window.location.href='form-home.php?delete_id='+id;
+		 }
+		}
 	</script>
 	<body>
 		<div style="text-align:center; margin-top:5em; margin-bottom:-30">

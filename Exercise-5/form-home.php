@@ -167,14 +167,14 @@ if(isset($_GET['delete_id']))
 	<script type="text/javascript">
 		function edt_id(id)
 		{
-		 if(confirm('Sure to edit ?'))
+		 if(confirm('Edit this entry?'))
 		 {
 		  window.location.href='edit.php?edit_id='+id;
 		 }
 		}
 		function delete_id(id)
 		{
-		 if(confirm('Sure to Delete ?'))
+		 if(confirm('Delete this entry?'))
 		 {
 		  window.location.href='form-home.php?delete_id='+id;
 		 }
@@ -241,8 +241,8 @@ if(isset($_GET['delete_id']))
 					<!-- Mobile -->
 					<td><?php echo $row[8]; ?></td>
 					<!-- Comment -->
-					<td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="edit.png" style="width:30px;height:30px" align="EDIT"></a></td>
-					<td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="drop.png" style="width:30px;height:30px" align="DELETE"></a></td>
+					<td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="edit.png" style="width:30px;height:30px" title="edit" align="EDIT"></a></td>
+					<td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="drop.png" style="width:30px;height:30px" title="delete" align="DELETE"></a></td>
 				</tr>
 			<?php
 			}
