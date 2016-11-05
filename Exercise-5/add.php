@@ -3,19 +3,10 @@
 	$first_name = $last_name = $nickname = $email = $city_name = $gender = $mobile = $comment = "";
 		
 	$first_nameErr = $last_nameErr = $nicknameErr = $emailErr = $city_nameErr = $genderErr = $mobileErr = $commentErr = "";
+	
 	if(isset($_POST['btn-save']))
 	{
-		
-		// variables for input data
-		$first_name = $_POST['first_name'];
-		$last_name = $_POST['last_name'];
-		$nickname = $_POST['nickname'];
-		$email = $_POST['email'];
-		$city_name = $_POST['city_name'];
-		$gender = $_POST['gender'];
-		$mobile = $_POST['mobile'];
-		$comment = $_POST['comment'];
-		
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (empty($_POST['$first_name'])) {
 			$first_nameErr = "Name is required";
 		} else {
@@ -47,8 +38,9 @@
 			$nickname = "";
 			}
 		}
+		
 		if (empty($_POST["email"])) {
-		$emailErr = "Email is required";
+			$emailErr = "Email is required";
 	  	} else {
 			$email = test_input($_POST["email"]);
 			// check if e-mail address is well-formed
@@ -63,12 +55,6 @@
 		}else{
 		  	$city_name = test_input($_POST["city_name"]);
 		}
-		
-	  	if (empty($_POST["comment"])) {
-			$comment = "";
-	  	} else {
-			$comment = test_input($_POST["comment"]);
-	  	}
 		
 	  	if (empty($_POST["gender"])) {
 			$genderErr = "Gender is required";
@@ -85,12 +71,11 @@
 				$mobile = "";
 			}
 	  	}
-		// sql query for inserting data into database
-	 
+
 		$sql_query = "INSERT INTO users(first_name,last_name,nickname,email,user_city,gender, mobile, comment) VALUES('$first_name','$last_name','$nickname','$email','$city_name','$gender','$mobile','$comment')";
 		mysqli_query($con,$sql_query);
-			
-			// sql query for inserting data into database
+		// sql query for inserting data into database
+		}
 	}
 	function test_input($data) {
 		$data = trim($data);
@@ -307,19 +292,19 @@
 			<p><a href="form-home.php"><strong>*back to main page*</strong></a> 
 				<br>
 				<br>
-				First Name: <br>
+				First Name: <span class="error">* <?php echo $first_nameErr;?></span><br>
 				<input type="text" name="first_name" placeholder="First Name" required>
 				<br><br>
-				Last Name: <br>
+				Last Name: <span class="error">* <?php echo $last_nameErr;?></span><br>
 				<input type="text" name="last_name" placeholder="Last Name" required>
 				<br><br>
-				Nickname: <br>
+				Nickname: <span class="error">* <?php echo $nicknameErr;?></span><br>
 				<input type="text" name="nickname" placeholder="Nickname" required>
 				<br><br>
-				Email: <br>
+				Email: <span class="error">* <?php echo $emailErr;?></span><br>
 				<input type="text" name="email" placeholder="Email Address" required>
-				<span class="error">* <?php echo $emailErr;?></span>
-				<br><br>
+				<br>
+				<br>
 				Home: <br>
 				<input type="text" name="city_name" placeholder="City" required>
 				<br><br>
@@ -327,7 +312,7 @@
 				<input type="radio" name="gender" value="female">Female
 				<input type="radio" name="gender" value="male">Male
 				<br><br>
-				Mobile: <br>
+				Mobile: <span class="error">* <?php echo $mobileErr;?></span><br>
 				<input type="text" name="mobile" placeholder="Mobile Num" required>
 				<br><br>
 				Comment: <br>
