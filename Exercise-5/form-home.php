@@ -51,6 +51,7 @@ if(isset($_GET['delete_id']))
 			font-size: 25;
 			padding-left: 70;
 			padding-right: 70;
+			border-collapse: separate;
 		}
 		th{
 			background:#FFD1DC;
@@ -207,9 +208,9 @@ if(isset($_GET['delete_id']))
 		
 		<hr size="3px" width="58%" color="black">
 		<hr	size="3px" width="58%" color="black">
-		<br>
 		
-		<table cellspacing="7" >
+		<h1 style="font-size: 60px;margin-top:25px"> FORM INDEX </h1>
+		<table cellspacing="7" style="margin-top: -20px">
 			<tr><center>
 				<th style="font-size:30"><b>Name</b></th>
 				<th style="font-size:30"><b>Nickname</b></th>
@@ -247,6 +248,7 @@ if(isset($_GET['delete_id']))
 			<?php
 			}
 			?>
+			<tr><td style="border:none; background:none">&nbsp;</td></tr>
 			<tr>
 				<th colspan="9" style="text-align:center" class = "add"><a href="add.php">add data here</a></th>
 			</tr>

@@ -202,9 +202,10 @@ if(isset($_POST['btn-cancel']))
 		div.transbox {
 			background-color: rgba(255,255,255,.5);
 			margin: 30px;
-			margin-left: 500px;
-			margin-right: 500px;
-			padding:10;
+			margin-left: 650px;
+			margin-right: 650px;
+			padding: 5px;
+			margin-top: -30px;
 		}
 		.error {color: #FF0000;}
 	</style>
@@ -251,8 +252,8 @@ if(isset($_POST['btn-cancel']))
 		<hr size="3px" width="58%" color="black">
 		<hr	size="3px" width="58%" color="black">
 
+		<h1 style="font-size:60px"> EDIT ENTRY </h1>
 		<div class="transbox">
-			<h1 style="font-size:40px"> EDIT DATA </h1>
 			<form method="post">
 				<p>
 					First Name: <br>
@@ -282,6 +283,7 @@ if(isset($_POST['btn-cancel']))
 					<br>
 					<br>
 					<button type="submit" name="btn-update"><strong>UPDATE</strong></button>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
 				  </p>
 			</form>
