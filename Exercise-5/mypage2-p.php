@@ -1,7 +1,7 @@
 <html>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
-		WEBPROG-Excercise4
+		WEBPROG-Excercise5
 	</title>
 	<style>
 		body{
@@ -146,11 +146,11 @@
 		}
 		div.transbox {
 			background-color: rgba(255,255,255,.5);
-			padding:15px;
+			padding:5px;
 		}
 		#gallery{
-			margin-right: 10%;
-			margin-left: 10%;
+			margin-right: 20%;
+			margin-left: 20%;
 		}
 		.w3-content{max-width:980px;margin:auto}
 		.w3-section{margin-top:16px!important;margin-bottom:16px!important}
@@ -239,7 +239,7 @@
 			setTimeout(carousel, 1000); // Change image every 2 seconds
 		}
 		</script>
-		
+		<br>
 		<hr>
 		<hr>
 		

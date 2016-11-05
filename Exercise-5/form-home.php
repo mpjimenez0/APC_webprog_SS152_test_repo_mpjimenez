@@ -13,7 +13,7 @@ if(isset($_GET['delete_id']))
 <html>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
-		WEBPROG-Excercise4
+		WEBPROG-Excercise5
 	</title>
 	<style>
 		body{
@@ -211,14 +211,14 @@ if(isset($_GET['delete_id']))
 		
 		<table cellspacing="7" >
 			<tr><center>
-				<th style="font-size:25"><b>Name</b></th>
-				<th style="font-size:25"><b>Nickname</b></th>
-				<th style="font-size:25"><b>E-mail</th>
-				<th style="font-size:25"><b>Home</b></th>
-				<th style="font-size:25"><b>Gender</th>
-				<th style="font-size:25"><b>Mobile</th>
-				<th style="font-size:25"><b>Comment</th>
-				<th style="font-size:25" colspan="2"><b>etc..</b></th>
+				<th style="font-size:30"><b>Name</b></th>
+				<th style="font-size:30"><b>Nickname</b></th>
+				<th style="font-size:30"><b>E-mail</th>
+				<th style="font-size:30"><b>Home</b></th>
+				<th style="font-size:30"><b>Gender</th>
+				<th style="font-size:30"><b>Mobile</th>
+				<th style="font-size:30"><b>Comment</th>
+				<th style="font-size:30" colspan="2"><b>etc..</b></th>
 			</center></tr>
 			<?php
 				$sql_query="SELECT * FROM users";
