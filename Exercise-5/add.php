@@ -1,6 +1,6 @@
 <?php
 	include_once 'dbconfig.php';
-		$first_nameErr = $last_nameErr = $nicknameErr = $emailErr = $city_nameErr = $genderErr = $mobileErr = $commentErr = "";
+	$first_nameErr = $last_nameErr = $nicknameErr = $emailErr = $city_nameErr = $genderErr = $mobileErr = $commentErr = "";
 	if(isset($_POST['btn-save']))
 	{
 		$error = "";
@@ -51,7 +51,20 @@
 		
 		if($error === ""){
 			$sql_query = "INSERT INTO users(first_name,last_name,nickname,email,user_city,gender, mobile, comment) VALUES('$first_name','$last_name','$nickname','$email','$city_name','$gender','$mobile','$comment')";
-			mysqli_query($con,$sql_query);
+			if(mysqli_query($con,$sql_query)){
+				?>
+				<script type="text/javascript">
+				alert('Data input succesful');
+				window.location.href='form-home.php';
+				</script>
+				<?php
+			}else{
+				?>
+				<script type="text/javascript">
+				alert('error occured while inputting data');
+				</script>
+				<?php
+			}
 			// sql query for inserting data into database
 		}
 	}
