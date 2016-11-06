@@ -305,8 +305,8 @@
 				<input type="text" name="city_name" placeholder="City" required>
 				<br><br>
 				Gender: <br>
-				<input type="radio" name="gender" value="female">Female
-				<input type="radio" name="gender" value="male">Male
+				<input type="radio" name="gender" value="female">&nbsp;<img src="female.png" style="width:15px;height:25.5px" title="female">
+				<input type="radio" name="gender" value="male"><img src="male.png" style="width:30px;height:30px" title="male">
 				<br><br>
 				Mobile: <span class="error">* <?php echo $mobileErr;?></span><br>
 				<input type="text" name="mobile" placeholder="Mobile Num" required>
