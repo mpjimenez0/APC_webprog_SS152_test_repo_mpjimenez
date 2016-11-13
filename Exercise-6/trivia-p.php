@@ -18,7 +18,6 @@
 		}
 		div{
 			text-align:center;
-			align: middle;
 		}
 		a:link{
 			text-decoration:none;
@@ -138,22 +137,70 @@
 		.dropdown:hover .dropdown-content { 
 			display: block;
 		}
-		.mySlides {
-			display: block;
-			margin: auto;
-			padding: 10;
+		
+		.button {
+			background-color: transparent; /* Green */
+			border: none;
+			color: white;
+			padding: 4px 8px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.4s;
+			cursor: pointer;
+		}
+
+		.button1 {
+			background-color: #9292b4;
+			color: black; 
 			border: 2px solid black;
 		}
-		div.transbox {
-			background-color: rgba(255,255,255,.5);
-			padding:5px;
+
+		.button1:hover {
+			background-color: #9292b4;
+			color: white;
+			border: 2px solid white;
 		}
-		#gallery{
-			margin-right: 20%;
-			margin-left: 20%;
+		.blink {
+			-webkit-animation: blink .75s linear infinite;
+			-moz-animation: blink .75s linear infinite;
+			-ms-animation: blink .75s linear infinite;
+			-o-animation: blink .75s linear infinite;
+			 animation: blink .75s linear infinite;
 		}
-		.w3-content{max-width:980px;margin:auto}
-		.w3-section{margin-top:16px!important;margin-bottom:16px!important}
+		@-webkit-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@-moz-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@-ms-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@-o-keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+		@keyframes blink {
+			0% { opacity: 1; }
+			50% { opacity: 1; }
+			50.01% { opacity: 0; }
+			100% { opacity: 0; }
+		}
 		@font-face {
 			font-family: quicksand;
 			src: url(quicksand_book.otf);
@@ -166,7 +213,7 @@
 	
 	<body>
 		<div style="text-align:center; margin-top:5em; margin-bottom:-30">
-			<p style="font-family: amethyst; font-size: 50px;"><span title=""> (metanoia) </span></p>
+			<p style="font-family: amethyst; font-size: 50px;"> (metanoia) </p>
 		</div>
 		
 		<div id="div.menu">
@@ -188,60 +235,28 @@
 		</ul>
 		</div>
 		
-		<hr size="3px" width="58%" color="black">
-		<hr	size="3px" width="58%" color="black">
-			
+		<hr size="3px" width="300" color="black">
+		<hr	size="3px" width="70%" color="black">
+		
+		<h1 style="text-align:center; font-size: 3em"> FUN FACTS !! </h1>
 		<div>
-			<h1 style="font-size:40"> from instagram </h1>
-			<div class="transbox" id="gallery">
-				<p style="text-align:center">
-					<a href="https://www.instagram.com/p/BKOMgV1h06x/?taken-by=_eydriyuhn" target="_blank">
-						<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14280321_1234212163276797_1523550554_n.jpg?ig_cache_key=MTMzNzA2MTEzODQwMzY0MzA1Nw%3D%3D.2" style="width:400; height:400; padding:20; border: 2px solid black" alt="pagmamahal-ni-inay" class="insta">
-					</a>
-					<a href="https://www.instagram.com/p/BKTVp5yBxhN/?taken-by=_eydriyuhn" target="_blank">
-						<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14295389_164637553978645_1613835973_n.jpg?ig_cache_key=MTMzODUwODc1Mjc3NzA1ODM4MQ%3D%3D.2" style="width:400; height:400; padding:20; border: 2px solid black" alt="tulay" class="insta">
-					</a>	
-					<a href="https://www.instagram.com/p/BKU8570hdLv/?taken-by=_eydriyuhn" target="_blank">
-						<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/e35/14350400_333572740310605_2024852409_n.jpg?ig_cache_key=MTMzODk2Mj1MzI2ODY3MzI2Mw%3D%3D.2" style="width:400; height:400; padding:20; border: 2px solid black" alt="lakbay" class="insta">
-					</a>
-					<a href="https://www.instagram.com/p/BKXKENZBurv/?taken-by=_eydriyuhn" target="_blank" >
-						<img src="https://instagram.fmnl4-4.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.135.1080.1080/14373941_338848249784509_124719283_n.jpg?ig_cache_key=MTMzOTU4MzY4Mzg4NzU1NzM1OQ%3D%3D.2.c" style="width:400; height:400; padding:20; border: 2px solid black" alt="alphonsus" class="insta">
-					</a>
-				</p>
-			</div>
+			<p><b>My Favorite viand</b> : <br><em id="demo1">** answer **</em></p>
+			<button class="button button1" onclick="document.getElementById('demo1').innerHTML = 'KARE-KARE!!!'">click for answer</button>
+			
+			<p><b>My favorite ice-cream flavor</b> : <br><em id="demo2">** answer **</em></p>
+			<button class="button button1" onclick="document.getElementById('demo2').innerHTML = 'Avocado or Bubblegum'">click for answer</button>
+			
+			<p><b>My Pet-peeve</b> : <br><em id="demo3">** answer **</em></p>
+			<button class="button button1" onclick="document.getElementById('demo3').innerHTML = 'People who think High and Mighty of themselves'; document.getElementById('demo4').style.fontSize='60px'">click for answer</button>
+			
+			<p class="tab blink" id="demo4"> YES or NO?? </p>
+			
+			<p><b>I can do splits on both legs</b> : <br><em id="demo5">** answer **</em></p>
+			<button class="button button1" onclick="document.getElementById('demo5').innerHTML = 'YES!!'">click for answer</button>
+			
+			<p><b>I love taking care of kids</b> : <br><em id="demo6">** answer **</em></p>
+			<button class="button button1" onclick="document.getElementById('demo6').innerHTML = 'No... All of them annoy me.'">click for answer</button>
 		</div>
-		
-		<h1 style="font-size:40"> slideshow </h1>
-		<div class="w3-content w3-section" style="max-width:500px">
-			<img class="mySlides" src="banner.jpg" style="width:100%">
-			<img class="mySlides" src="ss.jpg" style="width:100%">
-			<img class="mySlides" src="ss1.jpg" style="width:100%">
-			<img class="mySlides" src="pep.jpg" style="width:100%">
-			<img class="mySlides" src="tone.jpg" style="width:100%">
-			<img class="mySlides" src="seniors.jpg" style="width:100%">
-			<img class="mySlides" src="sfa.jpg" style="width:100%">
-			<img class="mySlides" src="prom.jpg" style="width:100%">
-		</div>
-		
-		<script>
-		var myIndex = 0;
-		carousel();
-
-		function carousel() {
-			var i;
-			var x = document.getElementsByClassName("mySlides");
-			for (i = 0; i < x.length; i++) {
-			   x[i].style.display = "none";  
-			}
-			myIndex++;
-			if (myIndex > x.length) {myIndex = 1}    
-			x[myIndex-1].style.display = "block";  
-			setTimeout(carousel, 1000); // Change image every 2 seconds
-		}
-		</script>
-		<br>
-		<hr>
-		<hr>
 		
 		<p style="text-align:center">
 			<img src="jolteon-m.gif" alt="pokemon-gif" id="div-pic">

@@ -1,15 +1,3 @@
-<?php
-include_once 'dbconfig.php';
-
-// delete condition
-if(isset($_GET['delete_id']))
-{
- $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
- mysqli_query($con,$sql_query);
- header("Location: $_SERVER[PHP_SELF]");
-}
-// delete condition
-?>
 <html>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
@@ -51,13 +39,9 @@ if(isset($_GET['delete_id']))
 			font-size: 25;
 			padding-left: 70;
 			padding-right: 70;
-			border-collapse: separate;
 		}
 		th{
 			background:#FFD1DC;
-		}
-		th.add{
-			background:#c7b8e4;
 		}
 		td, th {
 			border: 3px solid #000000;
@@ -152,6 +136,7 @@ if(isset($_GET['delete_id']))
 		.dropdown-content a:hover {
 			color: #660066; 
 		}
+
 		.dropdown:hover .dropdown-content { 
 			display: block;
 		}
@@ -164,22 +149,7 @@ if(isset($_GET['delete_id']))
 			src: url(shorelines.otf);
 		}
 	</style>
-	<script type="text/javascript">
-		function edt_id(id)
-		{
-		 if(confirm('Edit this entry?'))
-		 {
-		  window.location.href='edit.php?edit_id='+id;
-		 }
-		}
-		function delete_id(id)
-		{
-		 if(confirm('Delete this entry?'))
-		 {
-		  window.location.href='form-home.php?delete_id='+id;
-		 }
-		}
-	</script>
+	
 	<body>
 		<div style="text-align:center; margin-top:5em; margin-bottom:-30">
 			<p style="font-family: amethyst; font-size: 50px;"> (metanoia) </p>
@@ -208,50 +178,67 @@ if(isset($_GET['delete_id']))
 		<hr size="3px" width="58%" color="black">
 		<hr	size="3px" width="58%" color="black">
 		
-		<h1 style="font-size: 60px;margin-top:25px"> FORM INDEX </h1>
-		<table cellspacing="7" style="margin-top: -20px">
-			<tr><center>
-				<th style="font-size:30"><b>Name</b></th>
-				<th style="font-size:30"><b>Nickname</b></th>
-				<th style="font-size:30"><b>E-mail</th>
-				<th style="font-size:30"><b>Home</b></th>
-				<th style="font-size:30"><b>Gender</th>
-				<th style="font-size:30"><b>Mobile</th>
-				<th style="font-size:30"><b>Comment</th>
-				<th style="font-size:30" colspan="2"><b>etc..</b></th>
-			</center></tr>
-			<?php
-				$sql_query="SELECT * FROM users";
-				$result_set=mysqli_query($con,$sql_query);
-				while($row=mysqli_fetch_row($result_set))
-				{
-			?>
-				<tr>
-					<td><b><?php echo $row[2],'</b>, ', $row[1]; ?></td>
-					<!-- Name = First Name + Last Name -->
-					<td><?php echo $row[3]; ?></td>
-					<!-- Nickname -->
-					<td><?php echo $row[4]; ?></td>
-					<!-- Email -->
-					<td><?php echo $row[5]; ?></td>
-					<!-- Address -->
-					<td><?php echo $row[6]; ?></td>
-					<!-- Gender-->
-					<td><?php echo $row[7]; ?></td>
-					<!-- Mobile -->
-					<td><?php echo $row[8]; ?></td>
-					<!-- Comment -->
-					<td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="edit.png" style="width:30px;height:30px" title="edit" align="EDIT" onmouseover="this.src='edit-hover.png';" onmouseout="this.src='edit.png';"></a></td>
-					<td class = "delete" align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="drop.png" style="width:30px;height:30px" title="delete" align="DELETE" onmouseover="this.src='drop-hover.png';" onmouseout="this.src='drop.png';"></a></td>
-				</tr>
-			<?php
-			}
-			?>
-			<tr><td style="border:none; background:none">&nbsp;</td></tr>
-			<tr>
-				<th colspan="9" style="text-align:center" class = "add"><a href="add.php">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add data here&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></th>
-			</tr>
-		</table>
+		<div>
+			<h1 style="font-size:40"><b>Introduction</b></h1>
+			<p id="normal">Hi, my name is <b>Marc Adrian Jimenez</b>, 17 years old, taking up <u>Bachelor of Science in Computer Science specializing in Computer Networks.</u> My nickname is <b>Marc </b><del>,but my father calls me <i>balong</i></del> and currently, I'm a 2<sup>nd</sup> year student, and so far, I'm enjoying and crying about my current stay in APC. I enjoy what I do at school because the interest I have for my chosen course grows and grows everyday. Crying because everything that we do gets harder and harder every term, but I know that I can motivate myself to finish this course and continue living my life and trying again when I drastically failed in this path.</p>
+		</div>
+
+		<p>
+			<img src="jolteon-m.gif" alt="pokemon-gif" id="div-pic">
+			<img src="donut.png" alt="donut" id="div-pic">
+			<img src="donut.png" alt="donut" id="div-pic">
+			<img src="donut.png" alt="donut" id="div-pic">
+			<img src="jolteon.gif" alt="pokemon-gif" id="div-pic">
+		</p>
+
+		<div>
+			<h1 style="font-size:40"><b>Hobbies</b></h1>
+			<p id="just"> Even though our schedule is so jam-packed and busy, with quizzes almost every week and of course, we have to study to be prepared for any surprise quizzes, we stil need to give ourselves time to relax our minds, like 30 minute up to 1 hour breaks (in order to keep our sanity), and when those times come, these are what I do.</p>
+				<table cellspacing="7" >
+					<tr>
+						<th style="font-size:38"><b>Hobby</b></th>
+						<th style="font-size:38"><b>Description</b></th>
+						<th style="font-size:38"><b>Link</b></th>
+					</tr>
+					<tr>
+						<td><b>Watching Anime</b></td>
+						<td>My Highschool classmates introduced "Anime" to me, Japanese Animation, in short, its Japanese Cartoons. I really like watching anime because I enjoy the flow of the series and I also get to learn japanese words at the same time-- 2 birds, 1 stone.</td>
+						<td><a href="https://kissanime.to/" target="_blank"><b>KissAnime</b><a></td>
+					</tr>
+					<tr>
+						<td><b>Reading Manga/Manhua</b></td>
+						<td>I read manga beacause I can progress through a story faster than watching its anime version</td>
+						<td><a href="http://mangafox.me/" target="_blank"><b>MangaFox</b></a>, <a href="http://www.mangareader.net/" target="_blank"><b>MangaReader</b></a></td>
+					</tr>
+					<tr>
+						<td><b>Watching K-Dramas</b></td>
+						<td>I've recently been hooked to K-dramas. Why? Because the plot is not cliche as compared to Filipino Telenovelas. Also, I admire the complexion of the koreans, even though they're 30+ years old, their skin is so flawless.</td>
+						<td><a href="http://kissasian.com/" target="_blank"><b>KissAsian</b></a></td>
+					</tr>
+				</table>
+		</div>
+		
+		<p>
+			<img src="jolteon-m.gif" alt="pokemon-gif" id="div-pic">
+			<img src="donut.png" alt="donut" id="div-pic">
+			<img src="donut.png" alt="donut" id="div-pic">
+			<img src="donut.png" alt="donut" id="div-pic">
+			<img src="jolteon.gif" alt="pokemon-gif" id="div-pic">
+		</p>
+		
+		<div>
+			<h1 style="font-size:40"><b>Interests</b></h1>
+			<p id="just">
+				<b>
+					Social Media
+				</b> - this made everything, especially connecting with your special ones easier. In this generation, everything totally rotates around the cloud, everything that is not connected to the cloud may be considered <i>worthless</i>. In Social Media, you can catch up with the world, trends, news and gossips are just sitting there, waiting to be accessed, so why not take advantage of it? 
+				<br><br>
+				<b>
+					Music
+				</b> - I enjoy listening to rock music, I may not look like that "emo rock weirdo", but I am. Listening to the melancholic and deep lyrics will really slap you with empathy, understanding the lyrics, along with the perfect melody will really put you in the singers place. Being abused and wanting to stand-up but you whatever you do, you just cant -- thats reality for me. But whatever the lyrics says will not haunt and dwell within me, because I know that when I try to stand-up and failed, I would just try and try until I succeed because there is nothing else I can do productive in my life, people should just keep on trying and trying until they can, and thats the effect of music in me.
+				<br>
+			</p>
+		</div>
 
 		<p style="text-align:center">
 			<img src="jolteon-m.gif" alt="pokemon-gif" style="width120px;height:120px">
