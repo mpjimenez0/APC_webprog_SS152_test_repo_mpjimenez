@@ -19,7 +19,7 @@
         <div class="gallery">
             <ul>
             <?php if(!empty($images)): foreach($images as $img): ?>
-               <li><img src="uploads/<?php echo $img['image']; ?>" alt=""></li>
+               <li><img src="uploads/<?php echo $img['image']; ?>" width="400px" height="400px" alt=""></li>
             <?php endforeach; endif; ?>
             </ul>
         </div>

@@ -5,7 +5,7 @@
 	</title>
 	<style>
 		body{
-			background-image: url("clouds-bg.png");
+			background-image: url('uploads/clouds-bg.png');
 			background-attachment: fixed;
 			font-family: quicksand;
 		}
@@ -184,11 +184,11 @@
 		</div>
 
 		<p>
-			<img src="jolteon-m.gif" alt="pokemon-gif" id="div-pic">
-			<img src="donut.png" alt="donut" id="div-pic">
-			<img src="donut.png" alt="donut" id="div-pic">
-			<img src="donut.png" alt="donut" id="div-pic">
-			<img src="jolteon.gif" alt="pokemon-gif" id="div-pic">
+			<img src="uploads/jolteon-m.gif" alt="pokemon-gif" id="div-pic">
+			<img src="uploads/donut.png" alt="donut" id="div-pic">
+			<img src="uploads/donut.png" alt="donut" id="div-pic">
+			<img src="uploads/donut.png" alt="donut" id="div-pic">
+			<img src="uploads/jolteon.gif" alt="pokemon-gif" id="div-pic">
 		</p>
 
 		<div>
@@ -219,11 +219,11 @@
 		</div>
 		
 		<p>
-			<img src="jolteon-m.gif" alt="pokemon-gif" id="div-pic">
-			<img src="donut.png" alt="donut" id="div-pic">
-			<img src="donut.png" alt="donut" id="div-pic">
-			<img src="donut.png" alt="donut" id="div-pic">
-			<img src="jolteon.gif" alt="pokemon-gif" id="div-pic">
+			<img src="uploads/jolteon-m.gif" alt="pokemon-gif" id="div-pic">
+			<img src="uploads/donut.png" alt="donut" id="div-pic">
+			<img src="uploads/donut.png" alt="donut" id="div-pic">
+			<img src="uploads/donut.png" alt="donut" id="div-pic">
+			<img src="uploads/jolteon.gif" alt="pokemon-gif" id="div-pic">
 		</p>
 		
 		<div>
@@ -241,11 +241,11 @@
 		</div>
 
 		<p style="text-align:center">
-			<img src="jolteon-m.gif" alt="pokemon-gif" style="width120px;height:120px">
-			<img src="donut.png" alt="donut" style="width:120px;height:120px">
-			<img src="donut.png" alt="donut" style="width:120px;height:120px">
-			<img src="donut.png" alt="donut" style="width:120px;height:120px">
-			<img src="jolteon.gif" alt="pokemon-gif" style="width:120px;height:120px">
+			<img src="uploads/jolteon-m.gif" alt="pokemon-gif" style="width120px;height:120px">
+			<img src="uploads/donut.png" alt="donut" style="width:120px;height:120px">
+			<img src="uploads/donut.png" alt="donut" style="width:120px;height:120px">
+			<img src="uploads/donut.png" alt="donut" style="width:120px;height:120px">
+			<img src="uploads/jolteon.gif" alt="pokemon-gif" style="width:120px;height:120px">
 		</p>
 		
 		<br>
@@ -254,10 +254,10 @@
 		<div>
 			<p style="text-align:center; font-family:quicksand; font-size: 20; color:black">- - - Jimenez, Marc Adrian P. | BSCS-CN151 | APC - - -</p>
 			<p style="text-align:center; margin-top:0.5em">
-				<a href="https://www.facebook.com/jumanjimenez" target="_blank"><img src="facebook.jpg" alt= "facebook"style="width:60px;height:60px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="https://twitter.com/_eydriyan" target="_blank"><img src="twitter.jpg" alt="twitter" style="width:60px; height:60px"></a>
+				<a href="https://www.facebook.com/jumanjimenez" target="_blank"><img src="uploads/facebook.jpg" alt= "facebook"style="width:60px;height:60px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="https://twitter.com/_eydriyan" target="_blank"><img src="uploads/twitter.jpg" alt="twitter" style="width:60px; height:60px"></a>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="https://www.instagram.com/_eydriyuhn/" target="_blank"><img src="instagram.jpg" alt="instagram" style="width:60px; height:60px"></a> .
+				<a href="https://www.instagram.com/_eydriyuhn/" target="_blank"><img src="uploads/instagram.jpg" alt="instagram" style="width:60px; height:60px"></a> .
 			</p>
 		</div>
 	</body>
