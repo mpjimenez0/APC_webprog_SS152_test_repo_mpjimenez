@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/webprog/Exercise-6/';
+$config['base_url'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -35,11 +35,11 @@ $config['base_url'] = 'http://localhost/webprog/Exercise-6/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'http://localhost/Exercise-6/';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
-| URI PROTOCOL
+| URI P ROTOCOL
 |--------------------------------------------------------------------------
 |
 | This item determines which server global should be used to retrieve the
