@@ -14,7 +14,7 @@ class News_model extends CI_Model {
             return $query->result_array();
         }
  
-        $query = $this->db->get_where('news', array('user_id' => $user_id));
+        $query = $this->db->get_where('users', array('user_id' => $user_id));
         return $query->row_array();
     }
     
@@ -22,13 +22,14 @@ class News_model extends CI_Model {
     {
         if ($id === 0)
         {
-            $query = $this->db->get('news');
+            $query = $this->db->get('users');
             return $query->result_array();
         }
  
-        $query = $this->db->get_where('news', array('id' => $id));
+        $query = $this->db->get_where('users', array('id' => $user_id));
         return $query->row_array();
     }
+    
     
     public function set_news($id = 0)
     {

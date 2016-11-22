@@ -20,15 +20,12 @@ class News extends CI_Controller {
  
     public function view($user_id = NULL)
     {
-        $data['user_item'] = $this->news_model->get_news($slug);
+        $data['user_id'] = $this->news_model->get_users($user_id);
         
-        if (empty($data['news_item']))
+        if (empty($data['user_id']))
         {
             show_404();
         }
- 
-        $data['title'] = $data['news_item']['title'];
- 
         $this->load->view('templates/header', $data);
         $this->load->view('news/view', $data);
         $this->load->view('templates/footer');

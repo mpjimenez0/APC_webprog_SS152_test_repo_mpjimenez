@@ -23,7 +23,7 @@
             <td><?php echo $user_item['mobile']; ?></td>
             <td><?php echo $user_item['comment']; ?></td>
             <td>
-                <a href="<?php echo site_url('news/'.$user_item['last_name']); ?>">View</a> | 
+                <a href="<?php echo site_url('news/'.$user_item['user_id']); ?>">View</a> | 
                 <a href="<?php echo site_url('news/edit/'.$user_item['user_id']); ?>">Edit</a> | 
                 <a href="<?php echo site_url('news/delete/'.$user_item['user_id']); ?>" onClick="return confirm('Are you sure you want to delete?')">Delete</a>
             </td>
