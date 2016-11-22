@@ -1,16 +1,16 @@
 <center><h2><?php echo $title; ?></h2>
  
-<table border='1' cellpadding='4'>
+<table>
     <tr>
-        <td><strong>First Name</strong></td>
-        <td><strong>Last Name</strong></td>
-        <td><strong>Nickname</strong></td>
-        <td><strong>Email</strong></td>
-        <td><strong>City</strong></td>
-        <td><strong>Gender</strong></td>
-        <td><strong>Mobile</strong></td>
-        <td><strong>Comment</strong></td>
-        <td><strong>Action</strong></td>
+        <th><<strong>First Name</strong></th>
+        <th><strong>Last Name</strong></th>
+        <th><strong>Nickname</strong></th>
+        <th><strong>Email</strong></th>
+        <th><strong>City</strong></th>
+        <th><strong>Gender</strong></th>
+        <th><strong>Mobile</strong></th>
+        <th><strong>Comment</strong></th>
+        <th><strong>Action</strong></th>
     </tr>
 <?php foreach ($users as $user_item): ?>
         <tr>

@@ -73,7 +73,7 @@ class News extends CI_Controller {
         $this->load->library('form_validation');
         
         $data['title'] = 'Edit a news item';        
-        $data['news_item'] = $this->news_model->get_news_by_id($id);
+        $data['user_item'] = $this->news_model->get_user_by_id($id);
         
         $this->form_validation->set_rules('title', 'Title', 'required');
         $this->form_validation->set_rules('text', 'Text', 'required');
@@ -87,7 +87,7 @@ class News extends CI_Controller {
         }
         else
         {
-            $this->news_model->set_news($id);
+            $this->news_model->set_news($user_id);
             //$this->load->view('news/success');
             redirect( base_url() . 'index.php/news');
         }

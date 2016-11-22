@@ -20,7 +20,7 @@ class News_model extends CI_Model {
     
     public function get_user_by_id($user_id = 0)
     {
-        if ($id === 0)
+        if ($user_id === 0)
         {
             $query = $this->db->get('users');
             return $query->result_array();
