@@ -41,8 +41,14 @@ class News extends CI_Controller {
  
         $data['title'] = 'Create a news item';
  
-        $this->form_validation->set_rules('title', 'Title', 'required');
-        $this->form_validation->set_rules('text', 'Text', 'required');
+        $this->form_validation->set_rules('first_name', 'First Name', 'required');
+        $this->form_validation->set_rules('last_name', 'Last Name', 'required');
+        $this->form_validation->set_rules('nickname', 'Nickname', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('user_city', 'City', 'required');
+        $this->form_validation->set_rules('gender', 'Gender', 'required');
+        $this->form_validation->set_rules('mobile', 'Mobile', 'required');
+        $this->form_validation->set_rules('comment', 'Comment', 'required');
  
         if ($this->form_validation->run() === FALSE)
         {
@@ -74,9 +80,15 @@ class News extends CI_Controller {
         
         $data['title'] = 'Edit a news item';        
         $data['user_item'] = $this->news_model->get_user_by_id($id);
-        
-        $this->form_validation->set_rules('title', 'Title', 'required');
-        $this->form_validation->set_rules('text', 'Text', 'required');
+               
+        $this->form_validation->set_rules('first_name', 'First Name', 'required');
+        $this->form_validation->set_rules('last_name', 'Last Name', 'required');
+        $this->form_validation->set_rules('nickname', 'Nickname', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('user_city', 'City', 'required');
+        $this->form_validation->set_rules('gender', 'Gender', 'required');
+        $this->form_validation->set_rules('mobile', 'Mobile', 'required');
+        $this->form_validation->set_rules('comment', 'Comment', 'required');
  
         if ($this->form_validation->run() === FALSE)
         {
