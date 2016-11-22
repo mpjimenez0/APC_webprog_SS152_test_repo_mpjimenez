@@ -37,6 +37,7 @@
             <td><textarea name="comment" rows="3" cols="40"><?php echo $user_item['comment'] ?></textarea></td>
         </tr>
         <tr>
+            <td colspan="2"><input type="submit" name="submit" value="Edit news item" /></td>
         </tr>
     </table>
 </form>
