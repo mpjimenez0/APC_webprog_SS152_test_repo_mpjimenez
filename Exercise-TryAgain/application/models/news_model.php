@@ -58,7 +58,7 @@ class News_model extends CI_Model {
 
     public function delete_news($id)
     {
-        $this->db->where('id', $id);
-        return $this->db->delete('news');
+        $this->db->where('user_id', $id);
+        return $this->db->delete('users');
     }
 }

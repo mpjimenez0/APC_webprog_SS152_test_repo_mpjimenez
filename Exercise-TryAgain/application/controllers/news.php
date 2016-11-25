@@ -114,7 +114,7 @@ class News extends CI_Controller {
             show_404();
         }
 
-        $news_item = $this->news_model->get_news_by_id($id);
+        $user_item = $this->news_model->get_user_by_id($id);
 
         $this->news_model->delete_news($id);
         redirect( base_url() . 'index.php/news');
