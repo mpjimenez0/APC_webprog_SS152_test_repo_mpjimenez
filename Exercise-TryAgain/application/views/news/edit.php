@@ -1,7 +1,7 @@
 <center><h2><?php echo $title; ?></h2>
- 
+
 <?php echo validation_errors(); ?>
- 
+
 <?php echo form_open('news/edit/'.$user_item['user_id']); ?>
     <table>
         <tr>
@@ -30,7 +30,7 @@
         </tr>
         <tr>
             <th><label for="mobile">Mobile</label></th>
-            <td><input type="input" name="Mobile" size="50" value="<?php echo $user_item['mobile'] ?>" /></td>
+            <td><input type="input" name="mobile" size="50" value="<?php echo $user_item['mobile'] ?>" /></td>
         </tr>
         <tr>
             <th><label for="comment">Comment</label></th>

@@ -1,15 +1,16 @@
 <html>
-        <head>
-                <title>CodeIgniter Tutorial</title>
-        </head>
-        <style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		WEBPROG-Excercise5
+	</title>
+	<style>
 		body{
 			background-image: url('uploads/clouds-bg.png');
 			background-attachment: fixed;
 			font-family: quicksand;
 		}
 		h1{
-			text-align:center; 
+			text-align:center;
 			color:black;
 		}
 		b{
@@ -26,33 +27,26 @@
 			color: black;
 		}
 		a:hover, a:active{
-			color: #966fd6; 
+			color: #966fd6;
 		}
 		p{
 			text-align: center;
 			font-size: 26;
 		}
 		table {
-			font-family: quicksand;
+			font-family:quicksand;
 			width: 100%;
 			font-size: 25;
 			padding-left: 70;
 			padding-right: 70;
-			border-collapse: separate;
 		}
 		th{
 			background:#FFD1DC;
-		}
-		th.add{
-			background:#c7b8e4;
 		}
 		td, th {
 			border: 3px solid #000000;
 			text-align: left;
 			padding: 10px;
-		}
-		td{
-			background-color: rgba(255,255,255,.5);
 		}
 		hr{
 			width: 58%;
@@ -93,7 +87,7 @@
 			padding: 0;
 			overflow: hidden;
 		}
-		
+
 		#div.menu{
 			width:465px;
 			margin: 0 auto;
@@ -137,20 +131,49 @@
 		}
 
 		.dropdown-content a:hover {
-			color: #660066; 
+			color: #660066;
 		}
-		.dropdown:hover .dropdown-content { 
+
+		.dropdown:hover .dropdown-content {
 			display: block;
 		}
 		@font-face {
 			font-family: quicksand;
-			src: url(system/fonts/quicksand_book.otf);
+			src: url(quicksand_book.otf);
 		}
 		@font-face {
 			font-family: amethyst;
-			src: url(system/fonts/shorelines.otf);
+			src: url(shorelines.otf);
 		}
 	</style>
-        <body>
+
+	<body>
+		<div style="text-align:center; margin-top:5em; margin-bottom:-30">
+			<p style="font-family: amethyst; font-size: 50px;"> (metanoia) </p>
+		</div>
+
+		<div id="div.menu">
+		<ul style="font-size:40" id="subcat">
+			<li>
+				<a href="mypage-p.php" id="headlink">main</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</li>
+			<li>
+				<a href="mypage2-p.php" id="headlink">gallery</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</li>
+				<li class="dropdown">
+				<a href="#" class="dropbtn">more...</a>
+				<div class="dropdown-content">
+					<a href="mypage1-p.php" id="headlink">profile</a>
+					<a href="trivia-p.php" id="headlink">trivia</a>
+					<a href="form-home.php" id="headlink">form</a>
+				</div>
+			</li>
+		</ul>
+		</div>
+
+		<hr size="3px" width="58%" color="black">
+		<hr	size="3px" width="58%" color="black">
+
+		<div>
                 <center><h1>My Website</h1>
                 <p><a href="<?php echo site_url('news'); ?>">Home</a> | <a href="<?php echo site_url('news/create'); ?>">Add News</a></p></center>
