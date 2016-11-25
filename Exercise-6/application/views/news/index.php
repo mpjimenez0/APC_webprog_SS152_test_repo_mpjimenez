@@ -1,6 +1,6 @@
 <center><h2><?php echo $title; ?></h2>
 
-<table>
+<table cellspacing="7" style="margin-top: -20px">
     <tr>
         <th><strong>First Name</strong></th>
         <th><strong>Last Name</strong></th>

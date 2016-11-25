@@ -3,7 +3,7 @@
 <?php echo validation_errors(); ?>
 
 <?php echo form_open('news/edit/'.$user_item['user_id']); ?>
-    <table>
+    <table cellspacing="7" style="margin-top: -20px">
         <tr>
             <th><label for="first_name">First Name</label></th>
             <td><input type="input" name="first_name" size="50" value="<?php echo $user_item['first_name'] ?>" /></td>
