@@ -47,7 +47,7 @@ class News extends CI_Controller {
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('user_city', 'City', 'required');
         $this->form_validation->set_rules('gender', 'Gender', 'required');
-        $this->form_validation->set_rules('mobile', 'Mobile', 'required');
+        $this->form_validation->set_rules('mobile', 'Mobile');
         $this->form_validation->set_rules('comment', 'Comment', 'required');
  
         if ($this->form_validation->run() === FALSE)

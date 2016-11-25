@@ -4,7 +4,7 @@
         </head>
         <style>
 		body{
-			background-image: url("clouds-bg.png");
+			background-image: url('uploads/clouds-bg.png');
 			background-attachment: fixed;
 			font-family: quicksand;
 		}
