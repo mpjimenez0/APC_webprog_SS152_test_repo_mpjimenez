@@ -1,8 +1,8 @@
 <center><h2><?php echo $title; ?></h2>
- 
+
 <table>
     <tr>
-        <th><<strong>First Name</strong></th>
+        <th><strong>First Name</strong></th>
         <th><strong>Last Name</strong></th>
         <th><strong>Nickname</strong></th>
         <th><strong>Email</strong></th>
@@ -23,8 +23,8 @@
             <td><?php echo $user_item['mobile']; ?></td>
             <td><?php echo $user_item['comment']; ?></td>
             <td>
-                <a href="<?php echo site_url('news/'.$user_item['user_id']); ?>">View</a> | 
-                <a href="<?php echo site_url('news/edit/'.$user_item['user_id']); ?>">Edit</a> | 
+                <a href="<?php echo site_url('news/'.$user_item['user_id']); ?>">View</a> |
+                <a href="<?php echo site_url('news/edit/'.$user_item['user_id']); ?>">Edit</a> |
                 <a href="<?php echo site_url('news/delete/'.$user_item['user_id']); ?>" onClick="return confirm('Are you sure you want to delete?')">Delete</a>
             </td>
         </tr>
