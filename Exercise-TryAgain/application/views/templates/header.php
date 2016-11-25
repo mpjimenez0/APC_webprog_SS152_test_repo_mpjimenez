@@ -1,11 +1,11 @@
 <html>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
-		WEBPROG-Excercise5
+		WEBPROG-Excercise6
 	</title>
 	<style>
 		body{
-			background-image: url('uploads/clouds-bg.png');
+			background-image: url("clouds-bg.png");
 			background-attachment: fixed;
 			font-family: quicksand;
 		}
@@ -34,19 +34,26 @@
 			font-size: 26;
 		}
 		table {
-			font-family:quicksand;
+			font-family: quicksand;
 			width: 100%;
 			font-size: 25;
 			padding-left: 70;
 			padding-right: 70;
+			border-collapse: separate;
 		}
 		th{
 			background:#FFD1DC;
+		}
+		th.add{
+			background:#c7b8e4;
 		}
 		td, th {
 			border: 3px solid #000000;
 			text-align: left;
 			padding: 10px;
+		}
+		td{
+			background-color: rgba(255,255,255,.5);
 		}
 		hr{
 			width: 58%;
@@ -133,7 +140,6 @@
 		.dropdown-content a:hover {
 			color: #660066;
 		}
-
 		.dropdown:hover .dropdown-content {
 			display: block;
 		}
