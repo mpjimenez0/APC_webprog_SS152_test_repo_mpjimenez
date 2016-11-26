@@ -1,5 +1,4 @@
 <center><h2><?php echo $title; ?></h2>
-
 <table cellspacing="7" style="margin-top: -20px">
     <tr>
         <th><strong>First Name</strong></th>

@@ -7,7 +7,7 @@
 		body{
 			background-image: url('../uploads/clouds-bg.png');
 			background-attachment: fixed;
-			font-family: Times New Roman;
+			font-family: 'quicksand';
 		}
 		h1{
 			text-align:center;
@@ -34,7 +34,7 @@
 			font-size: 26;
 		}
 		table {
-			font-family: quicksand;
+			font-family: "quicksand";
 			width: 100%;
 			font-size: 25;
 			padding-left: 70;
@@ -144,12 +144,12 @@
 			display: block;
 		}
 		@font-face {
-			font-family: quicksand;
-			src: url(quicksand_book.otf);
+			font-family: 'quicksand';
+			src: url('../system/fonts/Quicksand_book.otf');
 		}
 		@font-face {
 			font-family: amethyst;
-			src: url(shorelines.otf);
+			src: url('../system/fonts/shorelines.otf');
 		}
 		div.transbox {
 			background-color: rgba(255,255,255,.5);
@@ -161,5 +161,5 @@
 	</style>
 	<body>
 		<div>
-                <center><h1>My Website</h1>
+                <center><h1 style="font-family: quicksand">My Website</h1>
                 <p><a href="<?php echo site_url('news'); ?>">Home</a> | <a href="<?php echo site_url('news/create'); ?>">Add News</a></p></center>
