@@ -5,9 +5,9 @@
 	</title>
 	<style>
 		body{
-			background-image: url("uploads/clouds-bg.png");
+			background-image: url('../uploads/clouds-bg.png');
 			background-attachment: fixed;
-			font-family: quicksand;
+			font-family: Times New Roman;
 		}
 		h1{
 			text-align:center;
@@ -151,35 +151,15 @@
 			font-family: amethyst;
 			src: url(shorelines.otf);
 		}
+		div.transbox {
+			background-color: rgba(255,255,255,.5);
+			margin: 30px;
+			margin-left: 450px;
+			margin-right: 450px;
+			padding:10;
+		}
 	</style>
-
 	<body>
-		<div style="text-align:center; margin-top:5em; margin-bottom:-30">
-			<p style="font-family: amethyst; font-size: 50px;"> (metanoia) </p>
-		</div>
-
-		<div id="div.menu">
-		<ul style="font-size:40" id="subcat">
-			<li>
-				<a href="mypage-p.php" id="headlink">main</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			</li>
-			<li>
-				<a href="mypage2-p.php" id="headlink">gallery</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			</li>
-				<li class="dropdown">
-				<a href="#" class="dropbtn">more...</a>
-				<div class="dropdown-content">
-					<a href="mypage1-p.php" id="headlink">profile</a>
-					<a href="trivia-p.php" id="headlink">trivia</a>
-					<a href="form-home.php" id="headlink">form</a>
-				</div>
-			</li>
-		</ul>
-		</div>
-
-		<hr size="3px" width="58%" color="black">
-		<hr	size="3px" width="58%" color="black">
-
 		<div>
                 <center><h1>My Website</h1>
                 <p><a href="<?php echo site_url('news'); ?>">Home</a> | <a href="<?php echo site_url('news/create'); ?>">Add News</a></p></center>
