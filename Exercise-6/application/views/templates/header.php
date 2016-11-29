@@ -37,8 +37,8 @@
 			font-family: "quicksand";
 			width: 100%;
 			font-size: 25;
-			padding-left: 70;
-			padding-right: 70;
+			padding-left: 40;
+			padding-right: 40;
 			border-collapse: separate;
 		}
 		th{

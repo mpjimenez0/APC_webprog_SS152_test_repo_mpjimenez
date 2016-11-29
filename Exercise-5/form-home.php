@@ -14,8 +14,7 @@ if(isset($_GET['delete_id']))
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
 		WEBPROG-Excercise5
-	</title>
-
+	</title
 	<script type="text/javascript">
 		function edt_id(id)
 		{
