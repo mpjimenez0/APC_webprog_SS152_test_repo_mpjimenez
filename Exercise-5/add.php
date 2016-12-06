@@ -1,3 +1,5 @@
+// pina try ni kyla sakin.
+
 <?php
 	include_once 'dbconfig.php';
 	$first_nameErr = $last_nameErr = $nicknameErr = $emailErr = $city_nameErr = $genderErr = $mobileErr = $commentErr = "";
@@ -11,7 +13,7 @@
 			$first_name = "";
 			$error = "firstname";
 		}
-		
+
 		$last_name = test_input($_POST["last_name"]);
 		// check if name only contains letters and whitespace
 		if (!preg_match("/^[a-zA-Z ]*$/",$last_name)) {
@@ -19,14 +21,14 @@
 			$last_name = "";
 			$error = "lastname";
 		}
-		
+
 	  	$nickname = test_input($_POST["nickname"]);
 	  	if (!preg_match("/^[a-zA-Z ]*$/",$nickname)) {
 			$nicknameErr = "<br><em style='font-size:20px'>Only letters and white space allowed</em>";
 			$nickname = "";
 			$error = "nickname";
 		}
-		
+
 		$email = test_input($_POST["email"]);
 		// check if e-mail address is well-formed
 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -34,21 +36,21 @@
 			$email = "";
 			$error = "email";
 		}
-		
+
 		$city_name = test_input($_POST["city_name"]);
-		
+
 		$comment = test_input($_POST["comment"]);
-		
+
 		$gender = test_input($_POST["gender"]);
-		
+
 		$mobile = test_input($_POST["mobile"]);
-		
+
 		if(!preg_match("/^[0-9-]*$/",$mobile)){
 			$mobileErr = "<br><em style='font-size:20px'>&nbsp;Only numbers are allowed</em>";
 			$mobile = "";
 			$error = "mobile";
 		}
-		
+
 		if($error === ""){
 			$sql_query = "INSERT INTO users(first_name,last_name,nickname,email,user_city,gender, mobile, comment) VALUES('$first_name','$last_name','$nickname','$email','$city_name','$gender','$mobile','$comment')";
 			if(mysqli_query($con,$sql_query)){
@@ -87,7 +89,7 @@
 			font-family: quicksand;
 		}
 		h1{
-			text-align:center; 
+			text-align:center;
 			color:black;
 		}
 		b{
@@ -104,7 +106,7 @@
 			color: black;
 		}
 		a:hover, a:active{
-			color: #966fd6; 
+			color: #966fd6;
 		}
 		p{
 			text-align: center;
@@ -167,7 +169,7 @@
 			padding: 0;
 			overflow: hidden;
 		}
-		
+
 		#div.menu{
 			width:465px;
 			margin: 0 auto;
@@ -211,10 +213,10 @@
 		}
 
 		.dropdown-content a:hover {
-			color: #660066; 
+			color: #660066;
 		}
 
-		.dropdown:hover .dropdown-content { 
+		.dropdown:hover .dropdown-content {
 			display: block;
 		}
 		@font-face {
@@ -259,7 +261,7 @@
 		<div style="text-align:center; margin-top:5em; margin-bottom:-30">
 			<p style="font-family: amethyst; font-size: 50px;"> (metanoia) </p>
 		</div>
-		
+
 		<div id="div.menu">
 			<ul style="font-size:40" id="subcat">
 				<li>
@@ -278,14 +280,14 @@
 				</li>
 			</ul>
 		</div>
-		
+
 		<hr size="3px" width="58%" color="black">
 		<hr	size="3px" width="58%" color="black">
-		
+
 		<h1 style="font-size:60px;margin-top:25px">ADD DATA</h1>
 		<div class="transbox" style="margin-top:-20px">
 			<form method="post">
-			<p><a href="form-home.php"><strong>*back to main page*</strong></a> 
+			<p><a href="form-home.php"><strong>*back to main page*</strong></a>
 				<br>
 				<br>
 				First Name: <span class="error">* <?php echo $first_nameErr;?></span><br>
@@ -325,7 +327,7 @@
 			<img src="donut.png" alt="donut" style="width:120px;height:120px">
 			<img src="jolteon.gif" alt="pokemon-gif" style="width:120px;height:120px">
 		</p>
-		
+
 		<br>
 		<hr>
 
