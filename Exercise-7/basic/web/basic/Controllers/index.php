@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\UsersSearch */
+/* @var $searchModel app\models\TriviasSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Users';
+$this->title = 'Trivias';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="users-index">
+<div class="trivias-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Users', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Trivias', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -24,20 +24,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'user_id',
-            'first_name',
-            'last_name',
-            'nickname',
-            'email:email',
-            // 'user_city',
-            // 'gender',
-            // 'mobile',
-            // 'comment',
+            'triv_num',
+            'triv_q',
+            'triv_ans',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
-    <?php echo "WOOOOOOOOOH" ?>
-
 </div>
