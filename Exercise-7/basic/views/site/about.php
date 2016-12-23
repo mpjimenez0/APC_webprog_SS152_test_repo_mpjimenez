@@ -11,12 +11,12 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <h2><b>Random Generated Trivias</b></h2>
     <p>
-      <?php foreach ($trivia as $trivia): ?>
+      <?php foreach ($trivia as $trivia_item): ?>
 
           <li>
-              <strong><?= Html::encode("{$trivia->triv_q}") ?>:</strong>
+              <strong><?= Html::encode("{$trivia_item->triv_q}") ?>:</strong>
       		<br></br>
-      		<answers style=display:none><?= $trivia->triv_ans ?></answers>
+      		<answers style=display:none><?= $trivia_item->triv_ans ?></answers>
       		<br></br>
           </li>
       <?php endforeach; ?>

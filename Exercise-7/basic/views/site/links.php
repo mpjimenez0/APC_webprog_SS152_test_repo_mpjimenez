@@ -7,6 +7,16 @@ use yii\helpers\Html;
 $this->title = 'links';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+<script>
+$(document).ready(function()
+{
+    $("#show").click(function(){
+        $("answers").toggle(500);
+    });
+});
+</script>
+
 <div class="site-about">
     <h1><?= Html::encode($this->title) ?></h1>
 
