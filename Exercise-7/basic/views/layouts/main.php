@@ -42,18 +42,6 @@ AppAsset::register($this);
             ['label' => 'Info', 'url' => ['/site/info']],
             ['label' => 'Hobbies', 'url' => ['/site/hobbies']],
             ['label' => 'Gallery', 'url' => ['/site/gallery']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
         ],
     ]);
     NavBar::end();
