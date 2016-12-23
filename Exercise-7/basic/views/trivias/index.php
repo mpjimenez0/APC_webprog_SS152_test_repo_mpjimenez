@@ -7,11 +7,12 @@ use yii\helpers\Html;
 $this->title = 'Trivias';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 $(document).ready(function()
 {
     $("#show").click(function(){
-       document.getElementById('answer').style.display='block';
+       $('answer').toggle();
     });
 });
 </script>
@@ -33,8 +34,8 @@ $(document).ready(function()
     <li>
         <strong><?= Html::encode("{$trivia->triv_q}") ?>:</strong>
 		<br></br>
-		<p id="answer" style="display:none"><?=$trivia->triv_ans ?></p>
+		<answer style="display:none"><?=$trivia->triv_ans ?></answer>
 		<br></br>
     </li>
 <?php endforeach; ?>
-<button onclick="document.getElementById('answer').style.display='block'" id="show">Show all answer</button>
+<button id="show">Show all answer</button>
