@@ -25,7 +25,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <br>
 
     <div>
-			<h1 style="font-size:40"> from instagram </h1>
+      <center>
+			<h2> from instagram </h2>
+      </center>
 			<div class="transbox" id="gallery">
 				<p style="text-align:center">
 					<a href="https://www.instagram.com/p/BKOMgV1h06x/?taken-by=_eydriyuhn" target="_blank">
@@ -45,16 +47,16 @@ $this->params['breadcrumbs'][] = $this->title;
 		</div>
     <br>
     <center>
-		<h1 style="font-size:40"> slideshow </h1>
+		<h2> slideshow </h2>
 		<div class="w3-content w3-section" style="max-width:500px">
-			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/banner.jpg";?>" style="width:100%">
-			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/ss.jpg";?>" style="width:100%">
-			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/ss1.jpg";?>" style="width:100%">
-			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/pep.jpg";?>" style="width:100%">
-			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/tone.jpg";?>" style="width:100%">
-			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/seniors.jpg";?>" style="width:100%">
-			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/sfa.jpg";?>" style="width:100%">
-			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/prom.jpg";?>" style="width:100%">
+			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/banner.jpg";?>"  height="350" width="350">
+			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/ss.jpg";?>"  height="350" width="350">
+			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/ss1.jpg";?>"  height="350" width="350" >
+			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/pep.jpg";?>"  height="350" width="350">
+			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/tone.jpg";?>"  height="350" width="350">
+			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/seniors.jpg";?>"  height="350" width="350">
+			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/sfa.jpg";?>" height="350" width="350">
+			<img class="mySlides" src="<?php echo Yii::$app->request->baseUrl . "/img/prom.jpg";?>" height="350" width="350" ">
 		</div>
     <center>
 
