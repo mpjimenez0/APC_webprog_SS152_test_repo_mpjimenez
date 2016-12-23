@@ -11,8 +11,7 @@ $this->params['breadcrumbs'][] = $this->title;
 $(document).ready(function()
 {
     $("#show").click(function(){
-      $("answers").toggle(500);
-       document.getElementById('answer').style.display='block'
+       document.getElementById('answer').style.display='block';
     });
 });
 </script>
@@ -38,4 +37,4 @@ $(document).ready(function()
 		<br></br>
     </li>
 <?php endforeach; ?>
-<button onclick="document.getElementById('answer').style.display=none" id="show">Show all answer</button>
+<button onclick="document.getElementById('answer').style.display='block'" id="show">Show all answer</button>
