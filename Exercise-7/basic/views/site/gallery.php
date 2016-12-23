@@ -18,12 +18,10 @@ div.transbox {
 
 use yii\helpers\Html;
 
-$this->title = 'Hobbies';
+$this->title = 'Gallery';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
     <h1><?= Html::encode($this->title) ?></h1>
-    <br>
-
     <div>
       <center>
 			<h2> from instagram </h2>
