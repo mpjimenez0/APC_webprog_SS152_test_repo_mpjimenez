@@ -13,4 +13,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         ansaveh
     </p>
+    <?php foreach ($trivia as $trivia): ?>
+
+        <li>
+            <strong><?= Html::encode("{$trivia->triv_q}") ?>:</strong>
+    		<br></br>
+    		<answers style=display:none><?= $trivia->triv_ans ?></answers>
+    		<br></br>
+        </li>
+    <?php endforeach; ?>
+    <button id="show">Show all answer</button>
 </div>

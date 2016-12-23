@@ -37,7 +37,4 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
-    <?php echo "WOOOOOOOOOH" ?>
-
 </div>
