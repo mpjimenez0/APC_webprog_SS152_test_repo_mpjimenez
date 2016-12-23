@@ -123,8 +123,8 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionHobbies()
+    public function actionInfo()
     {
-        return $this->render('hobbies');
+        return $this->render('info');
     }
 }
