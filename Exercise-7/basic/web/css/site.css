@@ -1,6 +1,12 @@
 html,
 body {
     height: 100%;
+    font-family: quicksand;
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url('../fonts/quicksand_book.otf');
 }
 
 .wrap {

@@ -18,7 +18,7 @@ $(document).ready(function()
 </script>
 
 <h1>Trivias</h1>
-<p></p>
+<p>listed below are 5 random trivias</p>
         <?php
 			if (Yii::$app->user->isGuest) {
 
