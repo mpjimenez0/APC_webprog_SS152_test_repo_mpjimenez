@@ -17,6 +17,24 @@ td, th {
 td{
   background-color: rgba(255,255,255,.5);
 }
+table {
+  font-family: quicksand;
+  width: 100%;
+  font-size: 25;
+  padding-left: 70;
+  padding-right: 70;
+}
+th{
+  background:#FFD1DC;
+}
+td, th {
+  border: 3px solid #000000;
+  text-align: left;
+  padding: 10px;
+}
+td{
+  background-color: rgba(255,255,255,.5);
+}
 </style>
 <body>
 <?php
@@ -31,7 +49,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <div>
 			<p id="just"> Even though our schedule is so jam-packed and busy, with quizzes almost every week and of course, we have to study to be prepared for any surprise quizzes, we stil need to give ourselves time to relax our minds, like 30 minute up to 1 hour breaks (in order to keep our sanity), and when those times come, these are what I do.</p>
-				<table cellspacing="7" >
+        <br>
+        <table cellspacing="7" >
 					<tr>
 						<th style="font-size:38"><b>Hobby</b></th>
 						<th style="font-size:38"><b>Description</b></th>
