@@ -15,6 +15,7 @@ body {
     margin: 0 auto -60px;
     padding: 0 0 60px;
     background-color: #b19cd9;
+    background-image: url("../img/clouds-bg.png");
 }
 
 .wrap > .container {
@@ -23,7 +24,7 @@ body {
 
 .footer {
     height: 60px;
-    background-color: #732C7B;
+    background-color: #222;
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
