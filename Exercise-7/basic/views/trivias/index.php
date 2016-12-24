@@ -32,7 +32,7 @@ $(document).ready(function()
     <li>
         <strong><?= Html::encode("{$trivia->triv_q}") ?>:</strong>
 		<br>
-		<answer style="display:none"><?=$trivia->triv_ans ?></answer>
+		<answer style="display:none"> -- &nbsp;<?=$trivia->triv_ans ?></answer>
 		<br>
     <br>
     </li>
