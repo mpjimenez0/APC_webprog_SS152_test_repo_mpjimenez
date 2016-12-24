@@ -45,5 +45,3 @@ $this->title = 'Exercise - 7';
             </div>
     </div>
 </div>
-<br><br>
-<br>
