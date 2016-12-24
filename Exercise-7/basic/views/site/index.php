@@ -6,13 +6,14 @@ $this->title = 'Exercise - 7';
 ?>
 <div class="site-index">
 
-    <div class="jumbotron">
+    <div class="jumbotron" style="background-color: rgba(255,255,255,.5); padding:300;">
         <p style="font-size:100px">こんにちは</h1>
         <p>* kon'nichiwa *</p>
-        <br>
-        <p class="lead">For more details about using Yii, click below.</p>
+    </div>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+    <div>
+      <h1 style="font-size:40"><b>Introduction</b></h1>
+      <p id="normal">Hi, my name is <b>Marc Adrian Jimenez</b>, 17 years old, taking up <u>Bachelor of Science in Computer Science specializing in Computer Networks.</u> My nickname is <b>Marc </b><del>,but my father calls me <i>balong</i></del> and currently, I'm a 2<sup>nd</sup> year student, and so far, I'm enjoying and crying about my current stay in APC. I enjoy what I do at school because the interest I have for my chosen course grows and grows everyday. Crying because everything that we do gets harder and harder every term, but I know that I can motivate myself to finish this course and continue living my life and trying again when I drastically failed in this path.</p>
     </div>
 
     <div class="body-content">
