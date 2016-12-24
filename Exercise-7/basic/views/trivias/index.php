@@ -26,16 +26,15 @@ $(document).ready(function()
 				echo Html::a('Edit a Trivia', ['trivias/index'], ['class' => 'btn btn-success']);
 			}
 			?>
-
-<br></br>
 <ul>
 <?php foreach ($trivia as $trivia): ?>
 
     <li>
         <strong><?= Html::encode("{$trivia->triv_q}") ?>:</strong>
-		<br></br>
+		<br>
 		<answer style="display:none"><?=$trivia->triv_ans ?></answer>
-		<br></br>
+		<br>
+    <br>
     </li>
 <?php endforeach; ?>
 <button id="show">Show all answers</button>
