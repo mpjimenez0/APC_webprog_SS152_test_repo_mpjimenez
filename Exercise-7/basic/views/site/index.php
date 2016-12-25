@@ -7,7 +7,7 @@ $this->title = 'Exercise - 7';
 <div class="site-index">
 
     <div class="jumbotron" style="background-color: rgba(255,255,255,.5); padding:300;">
-        <p style="font-size:100px">こんにちは</h1>
+        <p style="font-size:110px"><b>こんにちは</b></h1>
         <p>* kon'nichiwa *</p>
     </div>
 

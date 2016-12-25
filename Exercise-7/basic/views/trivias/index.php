@@ -19,13 +19,6 @@ $(document).ready(function()
 
 <h1>Trivias</h1>
 <p>listed below are 5 random trivias</p>
-        <?php
-			if (Yii::$app->user->isGuest) {
-
-			} elseif(Yii::$app->user->identity->username) {
-				echo Html::a('Edit a Trivia', ['trivias/index'], ['class' => 'btn btn-success']);
-			}
-			?>
 <ul>
 <?php foreach ($trivia as $trivia): ?>
 
@@ -37,4 +30,6 @@ $(document).ready(function()
     <br>
     </li>
 <?php endforeach; ?>
+
 <button id="show">Show all answers</button>
+</ul>
