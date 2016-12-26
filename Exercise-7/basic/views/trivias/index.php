@@ -32,6 +32,6 @@ $this->params['breadcrumbs'][] = $this->title;
           <br>
       </li>
   <?php endforeach; ?>
-  <button id="show">Show all answers</button> <br><br>
-  <button onclick="reload()">RANDOMIZE !</button>
+  <button id="show" class="btn btn-success">Show all answers</button> <br><br>
+  <button class="btn btn-success" onclick="reload()">RANDOMIZE !</button>
 </ul>
