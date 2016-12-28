@@ -48,7 +48,7 @@
     ?>
     <h1><?= Html::encode($this->title) ?></h1>
     <div>
-			<p id="just"> Even though our schedule is so jam-packed and busy, with quizzes almost every week and of course, we have to study to be prepared for any surprise quizzes, we stil need to give ourselves time to relax our minds, like 30 minute up to 1 hour breaks (in order to keep our sanity), and when those times come, these are what I do.</p>
+			<p id="just"> Even though our schedule is so jam-packed and busy, with quizzes almost every week and of course, we have to study to be prepared for any surprise quizzes, (even though Im a computer science student, I wont put "coding" as my hobby) we stil need to give ourselves time to relax our minds, like 30 minute up to 1 hour breaks (in order to keep our sanity), and when those times come, these are what I do.</p>
         <br>
         <table cellspacing="7" >
 					<tr>
@@ -73,5 +73,8 @@
 					</tr>
 				</table>
 		</div>
+    <hr class="style18">
+      <h3>DID YOU KNOWW???</h3>
+      <p> **bragging rights**<br> I (with my 2 fellow blockmates) represented APC in an outside-school competition, and fortunately, we bagged the winning spot !! <br> It is the "<strong>Hack-a-superpower</strong> with bluemix" held by IBM and DevCon</p>
   </body>
 </html>
